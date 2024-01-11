@@ -1,0 +1,45 @@
+
+
+.greetings-section {
+    text-align: center;
+    padding-top: 128px;
+    margin: 0 15vw 128px;
+}
+
+.greetings-section .avatar {
+    width: 140px;
+    height: 140px;
+    background-color: black;
+    margin: 0 auto 86px;
+    border-radius: 50%;
+}
+
+
+.greetings-section h1 {
+    color: #212A3E;
+}
+
+.greetings-section p {
+    margin: 48px 0;
+    color: #212A3E;
+}
+
+.greetings-section .buttons-list {
+    display: flex;
+    justify-content: center;
+
+}
+
+.greetings-section .buttons-list .button {
+    font-size: 20px;
+    color: white;
+    background-color: #394867;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 8px;
+}

@@ -1,0 +1,23 @@
+.about-me-section {
+    background-color: #212A3E;
+    margin: 0;
+    translate: 0 2px;
+
+}
+
+.about-me-content {
+    background-color: white;
+    box-shadow: 0 0 2px #9BA4B5;
+    border-radius: 16px;
+    translate: 0 -68px;
+    width: calc(max(250px, 40vw));
+    margin: auto;
+    padding: 32px;
+
+
+}
+
+.about-me-content h2 {
+    text-align: center;
+    margin: 0 0 32px;
+}

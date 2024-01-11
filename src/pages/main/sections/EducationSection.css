@@ -1,0 +1,25 @@
+.education-section {
+    background-color: #212A3E;
+    margin: 0;
+    color: white;
+    padding: 0 0 16px;
+
+}
+
+.education-section h2 {
+    text-align: center;
+    margin: 0 0 32px;
+}
+
+.education-section .education {
+    width: calc(max(300px, 60vw));
+    margin: auto;
+}
+
+.education-section .education .image {
+    background-color: black;
+    width: calc(min(max(300px, 60vw) - 32px, 500px));
+    height: calc(min(max(300px, 60vw) * .5, 300px));
+    border-radius: 4px;
+
+}

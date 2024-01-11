@@ -1,7 +1,6 @@
 import './App.css'
+import {Main} from './pages/main/Main.tsx';
 
 export const App = () => {
-    return <div>
-        <h1>Hello world</h1>
-    </div>
+    return <Main/>
 }
