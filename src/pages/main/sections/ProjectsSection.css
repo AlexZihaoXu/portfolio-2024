@@ -1,13 +1,12 @@
 .projects-section {
     background-color: #F1F6F9;
-    padding: 32px 0;
+    padding: 48px 0;
     color: #212A3E;
 }
 
 .projects-section h1 {
     text-align: center;
     margin: 0;
-
 }
 
 .projects-section .project {
@@ -20,7 +19,34 @@
 
 .projects-section .image {
     background-color: black;
-    width: calc(min(max(200px, 50vw) - 32px, 300px));
-    height: calc(min(max(200px, 50vw) * .5, 200px));
+    margin: auto;
+    width: calc(min(max(350px, 50vw) - 32px, 300px));
+    height: calc(min(max(350px, 50vw) * .5, 200px));
     border-radius: 4px;
+}
+
+.project h3 .date {
+    display: inline-block;
+    float: right;
+    font-size: 14px;
+    translate: 0 3px;
+    color: #394867;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.projects-section .more {
+    padding: 4px 16px;
+    width: min-content;
+    height: min-content;
+    border: 2px solid #212A3E;
+    margin: 16px auto;
+    border-radius: 16px;
+    transition-duration: 100ms;
+}
+
+.projects-section .more:hover {
+    background-color: #212A3E;
+    color: white;
+    cursor: pointer;
 }

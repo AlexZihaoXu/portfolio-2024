@@ -1,0 +1,26 @@
+.skills-set-section {
+    background-color: #212A3E;
+    padding: 32px 0;
+    color: white;
+}
+
+.skills-set-section h1 {
+    text-align: center;
+}
+
+.skills-set-section h2 {
+    text-align: center;
+}
+
+.skills-set-section h3 {
+    text-align: center;
+}
+.skills-set-section ul {
+    margin: auto;
+    width: min-content;
+    padding-right: 48px;
+}
+
+.skills-set-section ul li {
+    width: min-content;
+}
