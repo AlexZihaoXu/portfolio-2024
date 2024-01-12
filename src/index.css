@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
 body {
     margin: 0;
     background-color: white;
+}
+
+p {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /*https://colorhunt.co/palette/f1f6f9394867212a3e9ba4b5*/

@@ -4,24 +4,38 @@
     text-align: center;
     padding-top: 128px;
     margin: 0 15vw 128px;
+
 }
 
 .greetings-section .avatar {
     width: 140px;
     height: 140px;
-    background-color: black;
+    background-color: white;
     margin: 0 auto 86px;
     border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 3px #9BA4B5;
+
+}
+
+.greetings-section .avatar img {
+    width: 150px;
+    translate: -36px 32px;
 }
 
 
 .greetings-section h1 {
     color: #212A3E;
+    letter-spacing: 2px;
+    font-family: 'Mukta', sans-serif;
+
 }
 
 .greetings-section p {
     margin: 48px 0;
     color: #212A3E;
+    font-size: 19px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .greetings-section .buttons-list {

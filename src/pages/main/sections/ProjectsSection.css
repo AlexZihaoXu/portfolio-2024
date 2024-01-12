@@ -6,47 +6,86 @@
 
 .projects-section h1 {
     text-align: center;
-    margin: 0;
-}
-
-.projects-section .project {
-    width: calc(max(300px, 60vw));
-    margin: auto;
-
-    padding: 0 0 32px;
+    margin: 0 auto 64px;
+    width: 150px;
     border-bottom: 1px solid #9BA4B5;
-}
 
-.projects-section .image {
-    background-color: black;
-    margin: auto;
-    width: calc(min(max(350px, 50vw) - 32px, 300px));
-    height: calc(min(max(350px, 50vw) * .5, 200px));
-    border-radius: 4px;
-}
+    font-size: 30px;
+    font-family: 'Mukta', sans-serif;
 
-.project h3 .date {
-    display: inline-block;
-    float: right;
-    font-size: 14px;
-    translate: 0 3px;
-    color: #394867;
-    font-weight: lighter;
-    font-style: italic;
 }
-
 .projects-section .more {
-    padding: 4px 16px;
-    width: min-content;
+    padding: 6px 24px;
+    width: fit-content;
     height: min-content;
     border: 2px solid #212A3E;
     margin: 16px auto;
-    border-radius: 16px;
+    border-radius: 32px;
     transition-duration: 100ms;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
 }
 
 .projects-section .more:hover {
     background-color: #212A3E;
     color: white;
     cursor: pointer;
+}
+
+.projects-section .project {
+    border: 1px solid red;
+    width: min(80vw, 800px);
+    margin: 32px auto;
+    display: flex;
+}
+
+.projects-section .project .title {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.projects-section .project .description {
+    font-family: "Open Sans", sans-serif;
+}
+
+.projects-section .project .image {
+    width: calc(max(150px, 20vw));
+    height: calc(max(80px, 10vw));
+    margin: 8px;
+    border-radius: 4px;
+    box-shadow: 0 0 1px #9BA4B5;
+    background-color: black;
+    display: inline-block;
+}
+
+.projects-section .project .information {
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+@media screen and (max-width: 660px) {
+    .projects-section .project .image {
+        width: calc(max(300px, 25vw));
+        height: calc(max(150px, 15vw));
+        margin: 8px auto;
+        border-radius: 4px;
+        box-shadow: 0 0 1px #9BA4B5;
+        background-color: black;
+        display: inline-block;
+    }
+    .projects-section .project {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects-section .project .information {
+        width: calc(max(300px, 25vw));
+    }
+
+    .projects-section .project .information .title {
+        font-size: 20px;
+    }
+
 }

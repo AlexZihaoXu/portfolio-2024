@@ -1,21 +1,23 @@
 import './ProjectsSection.css';
+import {projects_list} from '../../../data/projects.ts';
 
 const Project = (props: {
     preview_url?: string;
     title: string,
     description: string,
     date: string,
-    lastOne?: boolean
 }) => {
-    return <div className={'project'} style={props.lastOne ? {
-        borderBottom: 'none'
-    } : undefined}>
-        <h3>{props.title}
-            <div className="date">[{props.date}]</div>
-        </h3>
-        <p>{props.description}</p>
+    return <div className={'project'}>
         <div className="image">
 
+        </div>
+        <div className="information">
+            <div className="title">
+                {props.title}
+            </div>
+            <div className="description">
+                {props.description}
+            </div>
         </div>
     </div>;
 };
@@ -23,35 +25,21 @@ export const ProjectsSection = () => {
     return <div className={'projects-section'}>
         <h1>Projects</h1>
 
-        <Project
-            description={'desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc '}
-            title={'TITLE TITLE'}
-            date={'2024 Jan - 2024 Feb'}
-        />
-        <Project
-            description={'desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc '}
-            title={'TITLE TITLE'}
-            date={'2024 Jan - 2024 Feb'}
-        />
-        <Project
-            description={'desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc '}
-            title={'TITLE TITLE'}
-            date={'2024 Jan - 2024 Feb'}
-        />
-        <Project
-            description={'desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc '}
-            title={'TITLE TITLE'}
-            date={'2024 Jan - 2024 Feb'}
-        />
-        <Project
-            description={'desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc '}
-            title={'TITLE TITLE'}
-            date={'2024 Jan - 2024 Feb'}
-            lastOne={true}
-        />
+        {
+            projects_list.map((project) => {
+                return <Project
+                    title={project.title}
+                    date={project.date as string}
+                    description={project.description}
+
+                >
+
+                </Project>
+            })
+        }
 
         <div className="more">
-            More
+            View More
         </div>
 
     </div>;

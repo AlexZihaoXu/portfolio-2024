@@ -2,6 +2,7 @@ import './GreetingsSection.css';
 import {FaGithub, FaInstagram} from 'react-icons/fa';
 import {MdOutlineMailOutline} from 'react-icons/md';
 import {ReactNode} from 'react';
+import avatar from './avatar.png';
 
 const SocialMediaButton = (props: {
     children: ReactNode
@@ -16,14 +17,11 @@ export const GreetingsSection = () => {
 
     return <div className="greetings-section">
         <div className="avatar">
-
+            <img src={avatar} alt="Avatar"/>
         </div>
         <h1>HELLO, I AM ALEX XU</h1>
-        <p>description description description description description description description description description
-            description description description description description description description description description
-            description description description description description description description description description
-            description description description description description description description description description
-            description description description description </p>
+        <p>Aklas als kdjf la sdkjf as dlkfjas dla dsaljf aslk dfjas dal sjdf asldj kfas dla dsaljf aslk dfjas sdkl sdklf
+            jas da lsk jdfa jdfa jdfa jdfa</p>
         <div className="buttons-list">
             <SocialMediaButton> <FaInstagram/> </SocialMediaButton>
             <SocialMediaButton> <FaGithub/> </SocialMediaButton>

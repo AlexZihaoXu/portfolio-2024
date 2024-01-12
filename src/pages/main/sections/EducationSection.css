@@ -4,19 +4,53 @@
     color: white;
     padding: 0 0 16px;
 
+
 }
 
 .education-section h2 {
     text-align: center;
-    margin: 0 0 32px;
+    width: 150px;
+    border-bottom: 1px solid #394867;
+    margin: 0 auto 32px;
+
+    font-size: 26px;
+    font-family: 'Mukta', sans-serif;
+}
+
+.education-section h3 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    margin: 8px 0 16px 0;
+}
+
+.education-section h4 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    color: #9BA4B5;
+    margin: 0 0 16px 0;
 }
 
 .education-section .education {
     width: calc(max(300px, 60vw));
     margin: auto;
+    border-top: 1px solid rgba(57, 72, 103, 0.3);
+
+    padding-top: 24px;
+}
+
+.education-section .education .time {
+    font-family: 'Graduate', serif;
+    font-size: 14px;
+    color: #9BA4B5;
+}
+
+.education-section p {
+    text-align: justify;
+
 }
 
 .education-section .education .image {
+    margin: auto;
     background-color: black;
     width: calc(min(max(300px, 60vw) - 32px, 500px));
     height: calc(min(max(300px, 60vw) * .5, 300px));

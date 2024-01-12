@@ -6,21 +6,94 @@
 
 .skills-set-section h1 {
     text-align: center;
+
+    font-size: 26px;
+    font-family: 'Mukta', sans-serif;
+
+    border-bottom: 1px solid #394867;
+    width: 180px;
+
+    margin: auto;
+
 }
 
 .skills-set-section h2 {
-    text-align: center;
+    text-align: left;
+
+    margin: 32px auto auto calc(10vw);
+
+
+    font-size: 23px;
+    font-weight: 600;
+    font-family: 'Mukta', sans-serif;
+
+    border-bottom: 1px solid #394867;
+    width: fit-content
 }
 
 .skills-set-section h3 {
     text-align: center;
+    width: max-content;
+    margin: 16px auto;
+
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Mukta', sans-serif;
+
 }
+
 .skills-set-section ul {
     margin: auto;
     width: min-content;
     padding-right: 48px;
+
+    font-size: 20px;
+    font-family: 'Mukta', sans-serif;
 }
 
 .skills-set-section ul li {
+    width: max-content;
+
+}
+
+.skills-set-section .sections-container {
+    text-align: center;
+    width: 80vw;
+    margin: auto;
+}
+
+.skills-set-section .section {
     width: min-content;
+    padding: 24px 0;
+    display: inline-flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 0 16px;
+}
+
+.skills-set-section .section ul li .icon img {
+    height: 20px;
+    image-rendering: pixelated;
+}
+
+.skills-set-section .section ul li .icon {
+    color: white;
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    translate: 0 8px;
+    margin-right: 12px;
+
+}
+
+.skills-set-section .section .icon {
+    width: 32px;
+    height: 32px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    justify-content: center;
 }

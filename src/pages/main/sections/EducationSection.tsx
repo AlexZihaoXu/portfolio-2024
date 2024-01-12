@@ -18,7 +18,6 @@ export const EducationSection = () => {
         <div className="education">
             <div className="time">2019 — 2023</div>
             <h3>Middlefield Collegiate Institute</h3>
-            <h4>Markham, ON</h4>
             <div className="image">
 
             </div>
