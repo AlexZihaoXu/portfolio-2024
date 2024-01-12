@@ -1,21 +1,26 @@
 import './SkillsSetSection.css';
 import {BiRocket} from 'react-icons/bi';
 import {IoGlobeOutline, IoHardwareChipOutline, IoLogoFirebase} from 'react-icons/io5';
-import {TbBrandThreejs, TbScript} from 'react-icons/tb';
-import {LuGamepad2, LuPencilRuler} from 'react-icons/lu';
+import {TbBrandThreejs, TbScript, TbTruckDelivery} from 'react-icons/tb';
+import {LuGamepad2, LuPencilRuler, LuTerminalSquare} from 'react-icons/lu';
 import {
     SiArduino,
     SiAseprite,
     SiBlender,
+    SiClion,
+    SiDocker,
+    SiEclipseide,
     SiFlask,
+    SiIntellijidea,
     SiNginx,
     SiOpengl,
     SiProcessingfoundation,
-    SiSfml
+    SiPycharm,
+    SiSfml,
+    SiVisualstudiocode
 } from 'react-icons/si';
 import {FaCloudflare, FaRaspberryPi, FaReact} from 'react-icons/fa';
 import {FiMonitor, FiServer} from 'react-icons/fi';
-import {VscChip} from 'react-icons/vsc';
 import pygame from './pygame.png';
 import fusion360 from './fusion360.png';
 import {
@@ -32,11 +37,123 @@ import {
     TypescriptPlain
 } from 'devicons-react';
 import {FaUnity} from 'react-icons/fa6';
+import {ReactNode} from 'react';
+import {MdOutlineCloudQueue} from 'react-icons/md';
+import {HiOutlineCubeTransparent} from 'react-icons/hi';
+import google_cloud_platform from './google_cloud_platform.png';
+import stm32 from './stm32.png'
 
+const ListItem = (props: {
+    children: ReactNode
+}) => {
+    return <li>
+        <div className={'list-dot'}>
+        </div>
+        {props.children}
+    </li>;
+};
 export const SkillsSetSection = () => {
-    return <>
+    return <div className={'skills-set-section-container'}>
         <div className={'skills-set-section'}>
             <h1>My Skill Sets</h1>
+            <p>
+                My skills cover a wide range, from coding and web development to game creation, embedded systems, and more.</p>
+
+            <h2>Toolchains</h2>
+            <div className="sections-container">
+                <div className="section">
+                    <div className="icon">
+                        <TbTruckDelivery size={32}/>
+                    </div>
+                    <h3>Integrated Development Environments</h3>
+                    <ul>
+                        <ListItem>
+                            <div className="icon"><SiIntellijidea/></div>
+                            IntelliJ IDEA
+                        </ListItem>
+                        <ListItem>
+                            <div className="icon"><SiPycharm/></div>
+                            PyCharm
+                        </ListItem>
+                        <ListItem>
+                            <div className="icon"><SiClion/></div>
+                            CLion
+                        </ListItem>
+                        <ListItem>
+                            <div className="icon"><SiVisualstudiocode/></div>
+                            Visual Studio Code
+                        </ListItem>
+                        <ListItem>
+                            <div className="icon"><SiEclipseide/></div>
+                            Eclipse
+                        </ListItem>
+                    </ul>
+                </div>
+                <div className="section">
+                    <div className="icon">
+                        <MdOutlineCloudQueue size={35}/>
+
+                    </div>
+                    <h3>DevOps & Cloud Services</h3>
+                    <ul>
+                        <ListItem>
+                            <div className="icon">
+                                <LuTerminalSquare />
+                            </div>
+                            SSH
+                        </ListItem>
+                        <ListItem>
+                            <div className="icon"><SiDocker/></div>
+                            Docker
+                        </ListItem>
+                        <ListItem>
+                            <div className="icon"><img src={google_cloud_platform} style={{scale: ".8"}} alt=""/></div>
+                            Google Cloud Platform
+                        </ListItem>
+                        <ListItem>
+                            <div className="icon">
+
+                                <div style={{
+                                    width: '20px',
+                                    height: '10px',
+                                    borderRadius: '10px',
+                                    border: '4px solid white',
+                                    translate: '1px 0'
+                                }}>
+
+                                </div>
+
+                            </div>
+                            Oracle Cloud Infrastructure
+                        </ListItem>
+                        <ListItem>
+                            <div className="icon"><IoLogoFirebase /></div>
+                            Firebase
+                        </ListItem>
+                    </ul>
+                </div>
+                <div className="section">
+                    <div className="icon">
+                        <HiOutlineCubeTransparent size={32}/>
+
+
+                    </div>
+                    <h3>Design & 3D Modeling Tools</h3>
+                    <ul>
+                        <ListItem>
+                            <div className="icon"><SiBlender/></div>
+                            Blender
+                        </ListItem>
+                        <ListItem>
+                            <div className="icon"><img src={fusion360} alt=""/></div>
+                            Fusion 360
+                        </ListItem>
+
+                    </ul>
+                </div>
+            </div>
+
+
             <h2>Programming Languages</h2>
             <div className="sections-container">
                 <div className="section">
@@ -45,26 +162,26 @@ export const SkillsSetSection = () => {
                     </div>
                     <h3>General Purpose</h3>
                     <ul>
-                        <li>
-                            <div className="icon"><PythonPlain/></div>
+                        <ListItem>
+                            <div className="icon"><PythonPlain color={'white'} size={28}/></div>
                             Python
-                        </li>
-                        <li>
-                            <div className="icon"><CPlain/></div>
+                        </ListItem>
+                        <ListItem>
+                            <div className="icon"><CPlain color={'white'} size={28}/></div>
                             C
-                        </li>
-                        <li>
-                            <div className="icon"><CplusplusPlain/></div>
+                        </ListItem>
+                        <ListItem>
+                            <div className="icon"><CplusplusPlain color={'white'} size={28}/></div>
                             C++
-                        </li>
-                        <li>
-                            <div className="icon"><CsharpPlain/></div>
+                        </ListItem>
+                        <ListItem>
+                            <div className="icon"><CsharpPlain color={'white'} size={28}/></div>
                             C#
-                        </li>
-                        <li>
-                            <div className="icon"><JavaPlain/></div>
+                        </ListItem>
+                        <ListItem>
+                            <div className="icon"><JavaPlain color={'white'} size={28}/></div>
                             Java
-                        </li>
+                        </ListItem>
                     </ul>
                 </div>
                 <div className="section">
@@ -74,22 +191,22 @@ export const SkillsSetSection = () => {
                     </div>
                     <h3>Web Development</h3>
                     <ul>
-                        <li>
-                            <div className="icon"><JavascriptPlain/></div>
+                        <ListItem>
+                            <div className="icon"><JavascriptPlain color={'white'} size={28}/></div>
                             JavaScript
-                        </li>
-                        <li>
-                            <div className="icon"><TypescriptPlain/></div>
+                        </ListItem>
+                        <ListItem>
+                            <div className="icon"><TypescriptPlain color={'white'} size={28}/></div>
                             TypeScript
-                        </li>
-                        <li>
-                            <div className="icon"><Html5Plain/></div>
+                        </ListItem>
+                        <ListItem>
+                            <div className="icon"><Html5Plain color={'white'} size={28}/></div>
                             HTML
-                        </li>
-                        <li>
-                            <div className="icon"><Css3Plain/></div>
+                        </ListItem>
+                        <ListItem>
+                            <div className="icon"><Css3Plain color={'white'} size={28}/></div>
                             CSS
-                        </li>
+                        </ListItem>
                     </ul>
                 </div>
                 <div className="section">
@@ -99,10 +216,10 @@ export const SkillsSetSection = () => {
                     </div>
                     <h3>Scripting/Extension</h3>
                     <ul>
-                        <li>
-                            <div className="icon"><LuaPlain/></div>
+                        <ListItem>
+                            <div className="icon"><LuaPlain color={'white'} size={28}/></div>
                             Lua
-                        </li>
+                        </ListItem>
                     </ul>
                 </div>
             </div>
@@ -117,26 +234,26 @@ export const SkillsSetSection = () => {
                     </div>
                     <h3>Front End</h3>
                     <ul>
-                        <li>
+                        <ListItem>
                             <div className="icon"><FaReact/></div>
                             React
-                        </li>
-                        <li>
-                            <div className="icon"><JavascriptPlain/></div>
+                        </ListItem>
+                        <ListItem>
+                            <div className="icon"><JavascriptPlain color={'white'} size={28}/></div>
                             JavaScript
-                        </li>
-                        <li>
-                            <div className="icon"><TypescriptPlain/></div>
+                        </ListItem>
+                        <ListItem>
+                            <div className="icon"><TypescriptPlain color={'white'} size={28}/></div>
                             TypeScript
-                        </li>
-                        <li>
-                            <div className="icon"><Html5Plain/></div>
+                        </ListItem>
+                        <ListItem>
+                            <div className="icon"><Html5Plain color={'white'} size={28}/></div>
                             HTML
-                        </li>
-                        <li>
-                            <div className="icon"><Css3Plain/></div>
+                        </ListItem>
+                        <ListItem>
+                            <div className="icon"><Css3Plain color={'white'} size={28}/></div>
                             CSS
-                        </li>
+                        </ListItem>
                     </ul>
                 </div>
                 <div className="section">
@@ -145,22 +262,22 @@ export const SkillsSetSection = () => {
                     </div>
                     <h3>Server-side & Deployment</h3>
                     <ul>
-                        <li>
+                        <ListItem>
                             <div className="icon"><SiFlask/></div>
                             Flask
-                        </li>
-                        <li>
+                        </ListItem>
+                        <ListItem>
                             <div className="icon"><IoLogoFirebase/></div>
                             Firebase
-                        </li>
-                        <li>
+                        </ListItem>
+                        <ListItem>
                             <div className="icon"><SiNginx/></div>
                             Nginx
-                        </li>
-                        <li>
+                        </ListItem>
+                        <ListItem>
                             <div className="icon"><FaCloudflare/></div>
                             Cloudflare
-                        </li>
+                        </ListItem>
                     </ul>
                 </div>
             </div>
@@ -174,22 +291,22 @@ export const SkillsSetSection = () => {
                     </div>
                     <h3>Game Engines & Frameworks</h3>
                     <ul>
-                        <li>
+                        <ListItem>
                             <div className="icon"><FaUnity/></div>
                             Unity
-                        </li>
-                        <li>
+                        </ListItem>
+                        <ListItem>
                             <div className="icon"><img src={pygame} alt=""/></div>
                             Pygame
-                        </li>
-                        <li>
+                        </ListItem>
+                        <ListItem>
                             <div className="icon"><SiProcessingfoundation/></div>
                             Processing
-                        </li>
-                        <li>
+                        </ListItem>
+                        <ListItem>
                             <div className="icon"><TbBrandThreejs/></div>
                             Three.js
-                        </li>
+                        </ListItem>
                     </ul>
                 </div>
                 <div className="section">
@@ -200,30 +317,31 @@ export const SkillsSetSection = () => {
                     </div>
                     <h3>Low-Level Graphics & Audio</h3>
                     <ul>
-                        <li>
-                            <div className="icon"><SiOpengl/></div>
+                        <ListItem>
+                            <div className="icon"><SiOpengl size={45}/></div>
                             OpenGL
-                        </li>
-                        <li>
-                            <div className="icon"><OpenalPlain/></div>
+                        </ListItem>
+                        <ListItem>
+                            <div className="icon"><OpenalPlain color={'white'} size={45}/></div>
                             OpenAL
-                        </li>
-                        <li>
+                        </ListItem>
+                        <ListItem>
                             <div className="icon"><SiSfml/></div>
                             SFML
-                        </li>
-                        <li>
+                        </ListItem>
+                        <ListItem>
                             <div className="icon">
                                 <div style={{
                                     borderRadius: '50px',
                                     border: '4px solid white',
                                     padding: '0 4px',
-                                    scale: '.5'
+                                    translate: '2px 0',
+                                    scale: '.45'
                                 }}>GLSL
                                 </div>
                             </div>
                             GLSL
-                        </li>
+                        </ListItem>
                     </ul>
                 </div>
                 <div className="section">
@@ -234,25 +352,23 @@ export const SkillsSetSection = () => {
                     </div>
                     <h3>Graphics & 3D Modeling</h3>
                     <ul>
-                        <li>
+                        <ListItem>
                             <div className="icon"><SiBlender/></div>
                             Blender
-                        </li>
-                        <li>
+                        </ListItem>
+                        <ListItem>
                             <div className="icon"><SiAseprite/></div>
                             Aseprite
-                        </li>
-                        <li>
-                            <div className="icon"><img src={fusion360} alt=""/></div>
-                            Fusion 360
-                        </li>
+                        </ListItem>
                     </ul>
                 </div>
             </div>
 
             <h2>Embedded Systems & IoT</h2>
             <div className="sections-container">
-                <div className="section">
+                <div className="section" style={{
+                    margin: '0 12px'
+                }}>
                     <div className="icon">
                         <SiArduino/>
 
@@ -260,22 +376,26 @@ export const SkillsSetSection = () => {
                     <h3>Arduino</h3>
                 </div>
 
-                <div className="section">
+                <div className="section" style={{
+                    margin: '0 12px'
+                }}>
                     <div className="icon">
                         <FaRaspberryPi/>
                     </div>
                     <h3>Raspberry Pi</h3>
                 </div>
 
-                <div className="section">
+                <div className="section" style={{
+                    margin: '0 12px'
+                }}>
                     <div className="icon">
-                        <VscChip/>
+                        <img src={stm32} alt="STM32"/>
                     </div>
                     <h3>STM32</h3>
                 </div>
             </div>
         </div>
 
-    </>;
+    </div>;
 
 };

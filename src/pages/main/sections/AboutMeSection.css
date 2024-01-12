@@ -1,19 +1,22 @@
 
 
 .about-me-section {
-    background-color: #212A3E;
+    background: rgb(33,42,62);
+    background: linear-gradient(90deg, rgba(33,42,62,1) 0%, rgb(31, 33, 61) 100%);
     margin: 0;
     translate: 0 2px;
 }
 
 .about-me-content {
+    border-top: 1px solid #e9f3ff;
     background-color: white;
-    box-shadow: 0 0 2px #9BA4B5;
+    box-shadow: 0 2px 3px #111726aa;
     border-radius: 16px;
     translate: 0 -68px;
     width: calc(max(256px, 45vw));
     margin: auto;
     padding: 32px;
+    max-width: 420px;
 
 
 }
@@ -25,9 +28,22 @@
     border-bottom: 1px solid #9BA4B5;
     font-size: 28px;
     font-family: 'Mukta', sans-serif;
-
+    background: #25374F;
+    background: linear-gradient(to right, #25374F 0%, #212A3E 50%, #1f2844 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .about-me-content p {
-    font-size: 15px;
+    color: #212A3E;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media screen and (max-width: 660px){
+    .about-me-content p {
+        font-size: 15px;
+        scale: 1.08;
+    }
 }

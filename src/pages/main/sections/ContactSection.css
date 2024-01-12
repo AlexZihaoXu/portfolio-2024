@@ -5,7 +5,10 @@
 .contact-section h1 {
     text-align: center;
     font-size: 36px;
-    color: #212A3E;
+    background: #25374F;
+    background: linear-gradient(to right, #25374F 0%, #212A3E 50%, #1f2844 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-family: 'Mukta', sans-serif;
     border-bottom: 1px solid #9BA4B5;
     margin: 32px auto;
@@ -21,13 +24,17 @@
 
 }
 
-.contact-section li {
+.contact-section a {
     width: fit-content;
     display: flex;
     align-items: center;
+    transition-duration: 100ms;
+    color: #212A3E;
+    text-decoration: none;
+    margin: 12px 0;
 }
 
-.contact-section li:hover {
+.contact-section a:hover {
     text-decoration: underline;
     cursor: pointer;
 }

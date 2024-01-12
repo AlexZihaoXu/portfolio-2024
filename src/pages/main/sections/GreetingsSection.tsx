@@ -5,11 +5,12 @@ import {ReactNode} from 'react';
 import avatar from './avatar.png';
 
 const SocialMediaButton = (props: {
-    children: ReactNode
+    children: ReactNode,
+    url: string
 }) => {
-    return <div className="button">
+    return <a className="button" href={props.url} target="_blank">
         {props.children}
-    </div>;
+    </a>;
 };
 
 
@@ -20,12 +21,25 @@ export const GreetingsSection = () => {
             <img src={avatar} alt="Avatar"/>
         </div>
         <h1>HELLO, I AM ALEX XU</h1>
-        <p>Aklas als kdjf la sdkjf as dlkfjas dla dsaljf aslk dfjas dal sjdf asldj kfas dla dsaljf aslk dfjas sdkl sdklf
-            jas da lsk jdfa jdfa jdfa jdfa</p>
+        <p>A <span style={{
+            fontWeight: 'bolder',
+            fontSize: '24px',
+            fontFamily: 'Mukta, sans-serif'
+        }} className={'computer-engineering'}>
+                Computer Engineering
+            </span> student at the <span style={{
+            fontWeight: 'bolder',
+            fontSize: '24px',
+            fontFamily: 'Mukta, sans-serif'
+
+        }} className={'university-of-waterloo'}>
+                University of Waterloo.
+            </span>
+        </p>
         <div className="buttons-list">
-            <SocialMediaButton> <FaInstagram/> </SocialMediaButton>
-            <SocialMediaButton> <FaGithub/> </SocialMediaButton>
-            <SocialMediaButton> <MdOutlineMailOutline/> </SocialMediaButton>
+            <SocialMediaButton url={'https://www.instagram.com/alex_xu.2005'}> <FaInstagram/> </SocialMediaButton>
+            <SocialMediaButton url={'https://github.com/AlexZihaoXu'}> <FaGithub/> </SocialMediaButton>
+            <SocialMediaButton url={'mailto:alex.zihao.xu@gmail.com'}> <MdOutlineMailOutline/> </SocialMediaButton>
         </div>
     </div>;
 };

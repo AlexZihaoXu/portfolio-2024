@@ -1,9 +1,22 @@
+.computer-engineering {
+    background: #e1bf1d;
+    background: linear-gradient(to right, #f5c240 0%, #F2B713 57%, #D68F00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
+.university-of-waterloo {
+    background: #5e246c;
+    background: linear-gradient(to right, #552062 0%, #4c0e8c 57%, #4d16b2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
 
 .greetings-section {
     text-align: center;
     padding-top: 128px;
-    margin: 0 15vw 128px;
+    margin: 0 12vw 128px;
 
 }
 
@@ -25,9 +38,13 @@
 
 
 .greetings-section h1 {
-    color: #212A3E;
-    letter-spacing: 2px;
+    /*color: #212A3E;*/
+    background: #25374F;
+    background: linear-gradient(to right, #25374F 0%, #212A3E 50%, #271633 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    letter-spacing: 2px;
     font-family: 'Mukta', sans-serif;
+    padding: 0 16px;
 
 }
 
@@ -56,4 +73,16 @@
     border-radius: 50%;
     border: 1px solid white;
     margin-right: 8px;
+    transition-duration: 100ms;
+}
+
+.greetings-section .buttons-list .button:hover {
+    cursor: pointer;
+    background-color: #9BA4B5;
+}
+
+@media screen and (max-width: 600px){
+    .university-of-waterloo {
+        display: block;
+    }
 }

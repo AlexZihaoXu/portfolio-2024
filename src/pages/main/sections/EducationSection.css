@@ -1,5 +1,6 @@
 .education-section {
-    background-color: #212A3E;
+    background: rgb(33,42,62);
+    background: linear-gradient(90deg, rgba(33,42,62,1) 0%, rgb(31, 33, 61) 100%);
     margin: 0;
     color: white;
     padding: 0 0 16px;
@@ -32,6 +33,7 @@
 
 .education-section .education {
     width: calc(max(300px, 60vw));
+    max-width: 800px;
     margin: auto;
     border-top: 1px solid rgba(57, 72, 103, 0.3);
 
@@ -45,15 +47,30 @@
 }
 
 .education-section p {
-    text-align: justify;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
 
 }
 
+.education-section .education .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition-duration: 1s;
+    image-rendering: high-quality;
+}
+
+.education-section .education .image img:hover {
+    scale: 1.02;
+}
+
 .education-section .education .image {
+    overflow: hidden;
     margin: auto;
     background-color: black;
     width: calc(min(max(300px, 60vw) - 32px, 500px));
     height: calc(min(max(300px, 60vw) * .5, 300px));
     border-radius: 4px;
-
+    box-shadow: 0 0 2px #212A3E;
 }

@@ -6,27 +6,27 @@ export const ContactSection = () => {
     return <div className={'contact-section'}>
         <h1>Contact Me</h1>
         <ul>
-            <li>
+            <a href={'mailto:alex.zihao.xu@gmail.com'}>
                 <div className="icon">
-                    <MdOutlineEmail />
+                    <MdOutlineEmail/>
                 </div>
                 <div className="cat">Email:</div>
                 alex.zihao.xu@gmail.com
-            </li>
-            <li>
+            </a>
+            <a href={'https://github.com/AlexZihaoXu'} target="_blank">
                 <div className="icon">
-                    <FaGithub />
+                    <FaGithub/>
                 </div>
                 <div className="cat">GitHub:</div>
                 https://github.com/AlexZihaoXu
-            </li>
-            <li>
+            </a>
+            <a href={'https://www.instagram.com/alex_xu.2005'} target="_blank">
                 <div className="icon">
-                    <FaInstagram />
+                    <FaInstagram/>
                 </div>
                 <div className="cat">Instagram:</div>
                 alex_xu.2005
-            </li>
+            </a>
         </ul>
     </div>;
 };
