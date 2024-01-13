@@ -49,7 +49,7 @@ export const projects_list: ProjectType[] = [
         images_list: [
             robotic_arm0
         ],
-        date: 'Dec 2021 - Jan 2022',
+        date: 'Oct 2023 - Nov 2023',
         tags: ['STM32', 'C', 'Fusion 360', 'Cura'],
         links: [
             {name: 'GitHub', link: 'https://github.com/AlexZihaoXu/RoboticArm_V5'}

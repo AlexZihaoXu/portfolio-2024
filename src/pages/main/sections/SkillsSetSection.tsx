@@ -41,49 +41,82 @@ import {ReactNode} from 'react';
 import {MdOutlineCloudQueue} from 'react-icons/md';
 import {HiOutlineCubeTransparent} from 'react-icons/hi';
 import google_cloud_platform from './google_cloud_platform.png';
-import stm32 from './stm32.png'
+import stm32 from './stm32.png';
+import {DissolveIn, FadeIn, ZoomBounceIn, ZoomShow} from '../../../utils.tsx';
+import {motion} from 'framer-motion';
 
 const ListItem = (props: {
-    children: ReactNode
+    children: ReactNode,
+    order: number
 }) => {
-    return <li>
-        <div className={'list-dot'}>
-        </div>
+    return <motion.li
+
+        initial={{
+            opacity: 0,
+            scale: 0.8
+        }}
+
+        whileInView={{
+            opacity: 1,
+            scale: 1
+        }}
+
+        viewport={{once: true}}
+
+
+        transition={{delay: .1 + props.order * 50 / 1000, duration: 0.1, type: 'spring', damping: 15, stiffness: 120}}
+    >
+
+        <DissolveIn delay={props.order * 20}>
+            <div className={'list-dot'}>
+            </div>
+        </DissolveIn>
         {props.children}
-    </li>;
+    </motion.li>;
 };
+
 export const SkillsSetSection = () => {
     return <div className={'skills-set-section-container'}>
         <div className={'skills-set-section'}>
             <h1>My Skill Sets</h1>
             <p>
-                My skills cover a wide range, from coding and web development to game creation, embedded systems, and more.</p>
+                <FadeIn delay={80}>
+                    My skills cover a wide range, from coding and web development to game creation, embedded systems,
+                    and
+                    more.
+                </FadeIn>
+            </p>
 
-            <h2>Toolchains</h2>
+
+            <h2><ZoomShow delay={100}>
+                Toolchains
+            </ZoomShow></h2>
             <div className="sections-container">
                 <div className="section">
                     <div className="icon">
-                        <TbTruckDelivery size={32}/>
+                        <ZoomBounceIn delay={200}>
+                            <TbTruckDelivery size={32}/>
+                        </ZoomBounceIn>
                     </div>
-                    <h3>Integrated Development Environments</h3>
+                    <h3><ZoomShow delay={180}>Integrated Development Environments</ZoomShow></h3>
                     <ul>
-                        <ListItem>
+                        <ListItem order={1}>
                             <div className="icon"><SiIntellijidea/></div>
                             IntelliJ IDEA
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={2}>
                             <div className="icon"><SiPycharm/></div>
                             PyCharm
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={3}>
                             <div className="icon"><SiClion/></div>
                             CLion
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={4}>
                             <div className="icon"><SiVisualstudiocode/></div>
                             Visual Studio Code
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={5}>
                             <div className="icon"><SiEclipseide/></div>
                             Eclipse
                         </ListItem>
@@ -91,26 +124,28 @@ export const SkillsSetSection = () => {
                 </div>
                 <div className="section">
                     <div className="icon">
-                        <MdOutlineCloudQueue size={35}/>
+                        <ZoomBounceIn delay={200}>
 
+                            <MdOutlineCloudQueue size={35}/>
+                        </ZoomBounceIn>
                     </div>
-                    <h3>DevOps & Cloud Services</h3>
+                    <h3><ZoomShow delay={180}>DevOps & Cloud Services</ZoomShow></h3>
                     <ul>
-                        <ListItem>
+                        <ListItem order={1}>
                             <div className="icon">
-                                <LuTerminalSquare />
+                                <LuTerminalSquare/>
                             </div>
                             SSH
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={2}>
                             <div className="icon"><SiDocker/></div>
                             Docker
                         </ListItem>
-                        <ListItem>
-                            <div className="icon"><img src={google_cloud_platform} style={{scale: ".8"}} alt=""/></div>
+                        <ListItem order={3}>
+                            <div className="icon"><img src={google_cloud_platform} style={{scale: '.8'}} alt=""/></div>
                             Google Cloud Platform
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={4}>
                             <div className="icon">
 
                                 <div style={{
@@ -126,25 +161,27 @@ export const SkillsSetSection = () => {
                             </div>
                             Oracle Cloud Infrastructure
                         </ListItem>
-                        <ListItem>
-                            <div className="icon"><IoLogoFirebase /></div>
+                        <ListItem order={5}>
+                            <div className="icon"><IoLogoFirebase/></div>
                             Firebase
                         </ListItem>
                     </ul>
                 </div>
                 <div className="section">
                     <div className="icon">
-                        <HiOutlineCubeTransparent size={32}/>
+                        <ZoomBounceIn delay={200}>
 
+                            <HiOutlineCubeTransparent size={32}/>
+                        </ZoomBounceIn>
 
                     </div>
-                    <h3>Design & 3D Modeling Tools</h3>
+                    <h3><ZoomShow delay={180}>Design & 3D Modeling Tools</ZoomShow></h3>
                     <ul>
-                        <ListItem>
+                        <ListItem order={1}>
                             <div className="icon"><SiBlender/></div>
                             Blender
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={2}>
                             <div className="icon"><img src={fusion360} alt=""/></div>
                             Fusion 360
                         </ListItem>
@@ -154,31 +191,38 @@ export const SkillsSetSection = () => {
             </div>
 
 
-            <h2>Programming Languages</h2>
+            <h2>
+                <ZoomShow delay={100}>
+                    Programming Languages
+                </ZoomShow>
+            </h2>
             <div className="sections-container">
                 <div className="section">
                     <div className="icon">
-                        <BiRocket/>
+                        <ZoomBounceIn delay={200}>
+
+                            <BiRocket/>
+                        </ZoomBounceIn>
                     </div>
-                    <h3>General Purpose</h3>
+                    <h3><ZoomShow delay={180}>General Purpose</ZoomShow></h3>
                     <ul>
-                        <ListItem>
+                        <ListItem order={1}>
                             <div className="icon"><PythonPlain color={'white'} size={28}/></div>
                             Python
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={2}>
                             <div className="icon"><CPlain color={'white'} size={28}/></div>
                             C
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={3}>
                             <div className="icon"><CplusplusPlain color={'white'} size={28}/></div>
                             C++
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={4}>
                             <div className="icon"><CsharpPlain color={'white'} size={28}/></div>
                             C#
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={5}>
                             <div className="icon"><JavaPlain color={'white'} size={28}/></div>
                             Java
                         </ListItem>
@@ -186,24 +230,26 @@ export const SkillsSetSection = () => {
                 </div>
                 <div className="section">
                     <div className="icon">
-                        <IoGlobeOutline/>
+                        <ZoomBounceIn delay={200}>
 
+                            <IoGlobeOutline/>
+                        </ZoomBounceIn>
                     </div>
-                    <h3>Web Development</h3>
+                    <h3><ZoomShow delay={180}>Web Development</ZoomShow></h3>
                     <ul>
-                        <ListItem>
+                        <ListItem order={1}>
                             <div className="icon"><JavascriptPlain color={'white'} size={28}/></div>
                             JavaScript
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={2}>
                             <div className="icon"><TypescriptPlain color={'white'} size={28}/></div>
                             TypeScript
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={3}>
                             <div className="icon"><Html5Plain color={'white'} size={28}/></div>
                             HTML
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={4}>
                             <div className="icon"><Css3Plain color={'white'} size={28}/></div>
                             CSS
                         </ListItem>
@@ -211,12 +257,14 @@ export const SkillsSetSection = () => {
                 </div>
                 <div className="section">
                     <div className="icon">
-                        <TbScript/>
+                        <ZoomBounceIn delay={200}>
 
+                            <TbScript/>
+                        </ZoomBounceIn>
                     </div>
-                    <h3>Scripting/Extension</h3>
+                    <h3><ZoomShow delay={180}>Scripting/Extension</ZoomShow></h3>
                     <ul>
-                        <ListItem>
+                        <ListItem order={1}>
                             <div className="icon"><LuaPlain color={'white'} size={28}/></div>
                             Lua
                         </ListItem>
@@ -225,32 +273,36 @@ export const SkillsSetSection = () => {
             </div>
 
 
-            <h2>Web Development Stack</h2>
+            <h2><ZoomShow delay={100}>
+                Web Development Stack
+            </ZoomShow></h2>
             <div className="sections-container">
                 <div className="section">
                     <div className="icon">
-                        <FiMonitor/>
+                        <ZoomBounceIn delay={200}>
 
+                            <FiMonitor/>
+                        </ZoomBounceIn>
                     </div>
-                    <h3>Front End</h3>
+                    <h3><ZoomShow delay={180}>Front End</ZoomShow></h3>
                     <ul>
-                        <ListItem>
+                        <ListItem order={1}>
                             <div className="icon"><FaReact/></div>
                             React
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={2}>
                             <div className="icon"><JavascriptPlain color={'white'} size={28}/></div>
                             JavaScript
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={3}>
                             <div className="icon"><TypescriptPlain color={'white'} size={28}/></div>
                             TypeScript
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={4}>
                             <div className="icon"><Html5Plain color={'white'} size={28}/></div>
                             HTML
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={5}>
                             <div className="icon"><Css3Plain color={'white'} size={28}/></div>
                             CSS
                         </ListItem>
@@ -258,23 +310,26 @@ export const SkillsSetSection = () => {
                 </div>
                 <div className="section">
                     <div className="icon">
-                        <FiServer/>
+                        <ZoomBounceIn delay={200}>
+
+                            <FiServer/>
+                        </ZoomBounceIn>
                     </div>
-                    <h3>Server-side & Deployment</h3>
+                    <h3><ZoomShow delay={180}>Server-side & Deployment</ZoomShow></h3>
                     <ul>
-                        <ListItem>
+                        <ListItem order={1}>
                             <div className="icon"><SiFlask/></div>
                             Flask
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={2}>
                             <div className="icon"><IoLogoFirebase/></div>
                             Firebase
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={3}>
                             <div className="icon"><SiNginx/></div>
                             Nginx
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={4}>
                             <div className="icon"><FaCloudflare/></div>
                             Cloudflare
                         </ListItem>
@@ -282,28 +337,32 @@ export const SkillsSetSection = () => {
                 </div>
             </div>
 
-            <h2>Game Development</h2>
+            <h2><ZoomShow delay={100}>
+                Game Development
+            </ZoomShow></h2>
             <div className="sections-container">
                 <div className="section">
                     <div className="icon">
-                        <LuGamepad2/>
+                        <ZoomBounceIn delay={200}>
 
+                            <LuGamepad2/>
+                        </ZoomBounceIn>
                     </div>
-                    <h3>Game Engines & Frameworks</h3>
+                    <h3><ZoomShow delay={180}>Game Engines & Frameworks</ZoomShow></h3>
                     <ul>
-                        <ListItem>
+                        <ListItem order={1}>
                             <div className="icon"><FaUnity/></div>
                             Unity
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={2}>
                             <div className="icon"><img src={pygame} alt=""/></div>
                             Pygame
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={3}>
                             <div className="icon"><SiProcessingfoundation/></div>
                             Processing
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={4}>
                             <div className="icon"><TbBrandThreejs/></div>
                             Three.js
                         </ListItem>
@@ -311,25 +370,27 @@ export const SkillsSetSection = () => {
                 </div>
                 <div className="section">
                     <div className="icon">
-                        <IoHardwareChipOutline/>
+                        <ZoomBounceIn delay={200}>
 
+                            <IoHardwareChipOutline/>
+                        </ZoomBounceIn>
 
                     </div>
-                    <h3>Low-Level Graphics & Audio</h3>
+                    <h3><ZoomShow delay={180}>Low-Level Graphics & Audio</ZoomShow></h3>
                     <ul>
-                        <ListItem>
+                        <ListItem order={1}>
                             <div className="icon"><SiOpengl size={45}/></div>
                             OpenGL
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={2}>
                             <div className="icon"><OpenalPlain color={'white'} size={45}/></div>
                             OpenAL
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={3}>
                             <div className="icon"><SiSfml/></div>
                             SFML
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={4}>
                             <div className="icon">
                                 <div style={{
                                     borderRadius: '50px',
@@ -346,17 +407,18 @@ export const SkillsSetSection = () => {
                 </div>
                 <div className="section">
                     <div className="icon">
+                        <ZoomBounceIn delay={200}>
 
-                        <LuPencilRuler/>
-
+                            <LuPencilRuler/>
+                        </ZoomBounceIn>
                     </div>
-                    <h3>Graphics & 3D Modeling</h3>
+                    <h3><ZoomShow delay={180}>Graphics & 3D Modeling</ZoomShow></h3>
                     <ul>
-                        <ListItem>
+                        <ListItem order={1}>
                             <div className="icon"><SiBlender/></div>
                             Blender
                         </ListItem>
-                        <ListItem>
+                        <ListItem order={2}>
                             <div className="icon"><SiAseprite/></div>
                             Aseprite
                         </ListItem>
@@ -364,34 +426,44 @@ export const SkillsSetSection = () => {
                 </div>
             </div>
 
-            <h2>Embedded Systems & IoT</h2>
+            <h2><ZoomShow delay={100}>
+                Embedded Systems & IoT
+            </ZoomShow></h2>
             <div className="sections-container">
                 <div className="section" style={{
                     margin: '0 12px'
                 }}>
                     <div className="icon">
-                        <SiArduino/>
+                        <ZoomBounceIn delay={200}>
 
+                            <SiArduino/>
+                        </ZoomBounceIn>
                     </div>
-                    <h3>Arduino</h3>
+                    <h3><ZoomShow delay={180}>Arduino</ZoomShow></h3>
                 </div>
 
                 <div className="section" style={{
                     margin: '0 12px'
                 }}>
                     <div className="icon">
-                        <FaRaspberryPi/>
+                        <ZoomBounceIn delay={200}>
+
+                            <FaRaspberryPi/>
+                        </ZoomBounceIn>
                     </div>
-                    <h3>Raspberry Pi</h3>
+                    <h3><ZoomShow delay={180}>Raspberry Pi</ZoomShow></h3>
                 </div>
 
                 <div className="section" style={{
                     margin: '0 12px'
                 }}>
                     <div className="icon">
-                        <img src={stm32} alt="STM32"/>
+                        <ZoomBounceIn delay={200}>
+
+                            <img src={stm32} alt="STM32"/>
+                        </ZoomBounceIn>
                     </div>
-                    <h3>STM32</h3>
+                    <h3><ZoomShow delay={180}>STM32</ZoomShow></h3>
                 </div>
             </div>
         </div>

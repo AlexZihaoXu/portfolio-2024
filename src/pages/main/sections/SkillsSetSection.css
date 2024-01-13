@@ -36,7 +36,9 @@
 .skills-set-section h2 {
     text-align: left;
 
-    margin: 32px auto auto 0;
+    margin: 32px auto 16px auto;
+
+    padding: 0 48px;
 
 
     font-size: 23px;
@@ -79,7 +81,7 @@
 }
 
 .skills-set-section .section {
-    width: min-content;
+    width: 320px;
     padding: 24px 0;
     display: inline-flex;
     flex-direction: column;
@@ -154,6 +156,7 @@
     }
     .skills-set-section .section {
         margin: 0;
+        width: fit-content;
     }
 
 }
