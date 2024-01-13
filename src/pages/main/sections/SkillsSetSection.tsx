@@ -42,37 +42,17 @@ import {MdOutlineCloudQueue} from 'react-icons/md';
 import {HiOutlineCubeTransparent} from 'react-icons/hi';
 import google_cloud_platform from './google_cloud_platform.png';
 import stm32 from './stm32.png';
-import {DissolveIn, FadeIn, ZoomBounceIn, ZoomShow} from '../../../utils.tsx';
-import {motion} from 'framer-motion';
+
 
 const ListItem = (props: {
     children: ReactNode,
     order: number
 }) => {
-    return <motion.li
-
-        initial={{
-            opacity: 0,
-            scale: 0.8
-        }}
-
-        whileInView={{
-            opacity: 1,
-            scale: 1
-        }}
-
-        viewport={{once: true}}
-
-
-        transition={{delay: .1 + props.order * 50 / 1000, duration: 0.1, type: 'spring', damping: 15, stiffness: 120}}
-    >
-
-        <DissolveIn delay={props.order * 20}>
-            <div className={'list-dot'}>
-            </div>
-        </DissolveIn>
+    return <li>
+        <div className={'list-dot'}>
+        </div>
         {props.children}
-    </motion.li>;
+    </li>;
 };
 
 export const SkillsSetSection = () => {
@@ -80,25 +60,24 @@ export const SkillsSetSection = () => {
         <div className={'skills-set-section'}>
             <h1>My Skill Sets</h1>
             <p>
-                <FadeIn delay={80}>
-                    My skills cover a wide range, from coding and web development to game creation, embedded systems,
-                    and
-                    more.
-                </FadeIn>
+
+                My skills cover a wide range, from coding and web development to game creation, embedded systems, and
+                more.
+
             </p>
 
 
-            <h2><ZoomShow delay={100}>
+            <h2>
                 Toolchains
-            </ZoomShow></h2>
+            </h2>
             <div className="sections-container">
                 <div className="section">
                     <div className="icon">
-                        <ZoomBounceIn delay={200}>
-                            <TbTruckDelivery size={32}/>
-                        </ZoomBounceIn>
+
+                        <TbTruckDelivery size={32}/>
+
                     </div>
-                    <h3><ZoomShow delay={180}>Integrated Development Environments</ZoomShow></h3>
+                    <h3>Integrated Development Environments</h3>
                     <ul>
                         <ListItem order={1}>
                             <div className="icon"><SiIntellijidea/></div>
@@ -124,12 +103,12 @@ export const SkillsSetSection = () => {
                 </div>
                 <div className="section">
                     <div className="icon">
-                        <ZoomBounceIn delay={200}>
 
-                            <MdOutlineCloudQueue size={35}/>
-                        </ZoomBounceIn>
+
+                        <MdOutlineCloudQueue size={35}/>
+
                     </div>
-                    <h3><ZoomShow delay={180}>DevOps & Cloud Services</ZoomShow></h3>
+                    <h3>DevOps & Cloud Services</h3>
                     <ul>
                         <ListItem order={1}>
                             <div className="icon">
@@ -169,13 +148,13 @@ export const SkillsSetSection = () => {
                 </div>
                 <div className="section">
                     <div className="icon">
-                        <ZoomBounceIn delay={200}>
 
-                            <HiOutlineCubeTransparent size={32}/>
-                        </ZoomBounceIn>
+
+                        <HiOutlineCubeTransparent size={32}/>
+
 
                     </div>
-                    <h3><ZoomShow delay={180}>Design & 3D Modeling Tools</ZoomShow></h3>
+                    <h3>Design & 3D Modeling Tools</h3>
                     <ul>
                         <ListItem order={1}>
                             <div className="icon"><SiBlender/></div>
@@ -192,19 +171,19 @@ export const SkillsSetSection = () => {
 
 
             <h2>
-                <ZoomShow delay={100}>
-                    Programming Languages
-                </ZoomShow>
+
+                Programming Languages
+
             </h2>
             <div className="sections-container">
                 <div className="section">
                     <div className="icon">
-                        <ZoomBounceIn delay={200}>
 
-                            <BiRocket/>
-                        </ZoomBounceIn>
+
+                        <BiRocket/>
+
                     </div>
-                    <h3><ZoomShow delay={180}>General Purpose</ZoomShow></h3>
+                    <h3>General Purpose</h3>
                     <ul>
                         <ListItem order={1}>
                             <div className="icon"><PythonPlain color={'white'} size={28}/></div>
@@ -230,12 +209,12 @@ export const SkillsSetSection = () => {
                 </div>
                 <div className="section">
                     <div className="icon">
-                        <ZoomBounceIn delay={200}>
 
-                            <IoGlobeOutline/>
-                        </ZoomBounceIn>
+
+                        <IoGlobeOutline/>
+
                     </div>
-                    <h3><ZoomShow delay={180}>Web Development</ZoomShow></h3>
+                    <h3>Web Development</h3>
                     <ul>
                         <ListItem order={1}>
                             <div className="icon"><JavascriptPlain color={'white'} size={28}/></div>
@@ -257,12 +236,12 @@ export const SkillsSetSection = () => {
                 </div>
                 <div className="section">
                     <div className="icon">
-                        <ZoomBounceIn delay={200}>
 
-                            <TbScript/>
-                        </ZoomBounceIn>
+
+                        <TbScript/>
+
                     </div>
-                    <h3><ZoomShow delay={180}>Scripting/Extension</ZoomShow></h3>
+                    <h3>Scripting/Extension</h3>
                     <ul>
                         <ListItem order={1}>
                             <div className="icon"><LuaPlain color={'white'} size={28}/></div>
@@ -273,18 +252,18 @@ export const SkillsSetSection = () => {
             </div>
 
 
-            <h2><ZoomShow delay={100}>
+            <h2>
                 Web Development Stack
-            </ZoomShow></h2>
+            </h2>
             <div className="sections-container">
                 <div className="section">
                     <div className="icon">
-                        <ZoomBounceIn delay={200}>
 
-                            <FiMonitor/>
-                        </ZoomBounceIn>
+
+                        <FiMonitor/>
+
                     </div>
-                    <h3><ZoomShow delay={180}>Front End</ZoomShow></h3>
+                    <h3>Front End</h3>
                     <ul>
                         <ListItem order={1}>
                             <div className="icon"><FaReact/></div>
@@ -310,12 +289,12 @@ export const SkillsSetSection = () => {
                 </div>
                 <div className="section">
                     <div className="icon">
-                        <ZoomBounceIn delay={200}>
 
-                            <FiServer/>
-                        </ZoomBounceIn>
+
+                        <FiServer/>
+
                     </div>
-                    <h3><ZoomShow delay={180}>Server-side & Deployment</ZoomShow></h3>
+                    <h3>Server-side & Deployment</h3>
                     <ul>
                         <ListItem order={1}>
                             <div className="icon"><SiFlask/></div>
@@ -337,18 +316,18 @@ export const SkillsSetSection = () => {
                 </div>
             </div>
 
-            <h2><ZoomShow delay={100}>
+            <h2>
                 Game Development
-            </ZoomShow></h2>
+            </h2>
             <div className="sections-container">
                 <div className="section">
                     <div className="icon">
-                        <ZoomBounceIn delay={200}>
 
-                            <LuGamepad2/>
-                        </ZoomBounceIn>
+
+                        <LuGamepad2/>
+
                     </div>
-                    <h3><ZoomShow delay={180}>Game Engines & Frameworks</ZoomShow></h3>
+                    <h3>Game Engines & Frameworks</h3>
                     <ul>
                         <ListItem order={1}>
                             <div className="icon"><FaUnity/></div>
@@ -370,13 +349,13 @@ export const SkillsSetSection = () => {
                 </div>
                 <div className="section">
                     <div className="icon">
-                        <ZoomBounceIn delay={200}>
 
-                            <IoHardwareChipOutline/>
-                        </ZoomBounceIn>
+
+                        <IoHardwareChipOutline/>
+
 
                     </div>
-                    <h3><ZoomShow delay={180}>Low-Level Graphics & Audio</ZoomShow></h3>
+                    <h3>Low-Level Graphics & Audio</h3>
                     <ul>
                         <ListItem order={1}>
                             <div className="icon"><SiOpengl size={45}/></div>
@@ -407,12 +386,12 @@ export const SkillsSetSection = () => {
                 </div>
                 <div className="section">
                     <div className="icon">
-                        <ZoomBounceIn delay={200}>
 
-                            <LuPencilRuler/>
-                        </ZoomBounceIn>
+
+                        <LuPencilRuler/>
+
                     </div>
-                    <h3><ZoomShow delay={180}>Graphics & 3D Modeling</ZoomShow></h3>
+                    <h3>Graphics & 3D Modeling</h3>
                     <ul>
                         <ListItem order={1}>
                             <div className="icon"><SiBlender/></div>
@@ -426,44 +405,44 @@ export const SkillsSetSection = () => {
                 </div>
             </div>
 
-            <h2><ZoomShow delay={100}>
+            <h2>
                 Embedded Systems & IoT
-            </ZoomShow></h2>
+            </h2>
             <div className="sections-container">
                 <div className="section" style={{
                     margin: '0 12px'
                 }}>
                     <div className="icon">
-                        <ZoomBounceIn delay={200}>
 
-                            <SiArduino/>
-                        </ZoomBounceIn>
+
+                        <SiArduino/>
+
                     </div>
-                    <h3><ZoomShow delay={180}>Arduino</ZoomShow></h3>
+                    <h3>Arduino</h3>
                 </div>
 
                 <div className="section" style={{
                     margin: '0 12px'
                 }}>
                     <div className="icon">
-                        <ZoomBounceIn delay={200}>
 
-                            <FaRaspberryPi/>
-                        </ZoomBounceIn>
+
+                        <FaRaspberryPi/>
+
                     </div>
-                    <h3><ZoomShow delay={180}>Raspberry Pi</ZoomShow></h3>
+                    <h3>Raspberry Pi</h3>
                 </div>
 
                 <div className="section" style={{
                     margin: '0 12px'
                 }}>
                     <div className="icon">
-                        <ZoomBounceIn delay={200}>
 
-                            <img src={stm32} alt="STM32"/>
-                        </ZoomBounceIn>
+
+                        <img src={stm32} alt="STM32"/>
+
                     </div>
-                    <h3><ZoomShow delay={180}>STM32</ZoomShow></h3>
+                    <h3>STM32</h3>
                 </div>
             </div>
         </div>

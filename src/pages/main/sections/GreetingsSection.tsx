@@ -3,26 +3,16 @@ import {FaGithub, FaInstagram} from 'react-icons/fa';
 import {MdOutlineMailOutline} from 'react-icons/md';
 import {ReactNode, useEffect} from 'react';
 import avatar from './avatar.png';
-import {motion} from 'framer-motion';
+
 
 const SocialMediaButton = (props: {
     children: ReactNode,
     url: string,
     delay: number
 }) => {
-    return <motion.a className="button" href={props.url} target="_blank"
-                     initial={{opacity: 0, y: 0, scale: 0.001}}
-                     whileInView={{
-                         opacity: 1, y: 0, scale: 1
-                     }}
-                     animate={{
-                         opacity: 1, y: 0, scale: 1
-                     }}
-                     exit={{opacity: 0, y: 50}}
-                     transition={{delay: props.delay, duration: 0.5, type: 'spring', damping: 10, stiffness: 100}}
-    >
+    return <a className="button" href={props.url} target="_blank">
         {props.children}
-    </motion.a>;
+    </a>;
 };
 
 
@@ -107,32 +97,16 @@ export const GreetingsSection = () => {
         };
     }, []);
 
-    return <motion.div
+    return <div
         className="greetings-section"
 
     >
-        <motion.div className="avatar"
-
-                    initial={{opacity: 0, y: 0, scale: 0.001}}
-                    animate={{opacity: 1, y: 0, scale: 1}}
-                    exit={{opacity: 0, y: 50}}
-                    transition={{duration: 0.5, type: 'spring', damping: 10, stiffness: 100}}
-        >
+        <div className="avatar">
             <canvas id={'avatar-cvs'}/>
-        </motion.div>
-        <motion.h1
-            initial={{opacity: 0, y: 20}}
-            animate={{opacity: 1, y: 0}}
-            exit={{opacity: 0, y: 50}}
-            transition={{duration: 0.5, delay: 0.3}}
-        >HELLO, I AM ALEX XU
-        </motion.h1>
-        <motion.p
-            initial={{opacity: 0, transform: 'translate(0, 10px) scale(0.97, 0.73)'}}
-            animate={{opacity: 1, transform: 'translate(0, 0) scale(1, 1)'}}
-            exit={{opacity: 0, y: 50}}
-            transition={{duration: 0.3, delay: 0.5}}
-        >A <span style={{
+        </div>
+        <h1>HELLO, I AM ALEX XU
+        </h1>
+        <p>A <span style={{
             fontWeight: 'bolder',
             fontSize: '24px',
             fontFamily: 'Mukta, sans-serif'
@@ -146,7 +120,7 @@ export const GreetingsSection = () => {
         }} className={'university-of-waterloo'}>
                 University of Waterloo.
             </span>
-        </motion.p>
+        </p>
         <div className="buttons-list">
             <SocialMediaButton delay={.1} url={'https://www.instagram.com/alex_xu.2005'}> <FaInstagram/>
             </SocialMediaButton>
@@ -154,5 +128,5 @@ export const GreetingsSection = () => {
             <SocialMediaButton delay={.3} url={'mailto:alex.zihao.xu@gmail.com'}> <MdOutlineMailOutline/>
             </SocialMediaButton>
         </div>
-    </motion.div>;
+    </div>;
 };
