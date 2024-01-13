@@ -52,7 +52,7 @@ const Project = (props: {
                             width: 'fit-content',
                             display: 'inline-block',
                             cursor: 'default'
-                        }}>
+                        }} key={generateUUID()}>
                             {tag}
                         </div>;
                     })
@@ -62,7 +62,7 @@ const Project = (props: {
 
                 {
                     props.project.links.map((link) => {
-                        return <a className={'link'} href={link.link} target="_blank">
+                        return <a className={'link'} href={link.link} target="_blank"  key={generateUUID()}>
                             <div style={{
                                 margin: '0 4px',
                                 display: 'flex',
@@ -71,10 +71,7 @@ const Project = (props: {
                                 <FaLink size={14}/>
                             </div>
                             {link.name}
-                        </a>
-
-
-                            ;
+                        </a>;
                     })
                 }
             </div>
@@ -93,8 +90,8 @@ export const ProjectsSection = () => {
                     let i = 0;
                     return projects_list.slice(0, 3).map((project) => {
                         i++;
-                        return <>
-                            <Project project={project} key={generateUUID()}/>
+                        return <div key={generateUUID()}>
+                            <Project project={project}/>
                             {
                                 i < 3 ? (
                                     <div style={{
@@ -102,13 +99,11 @@ export const ProjectsSection = () => {
                                         borderBottom: '1px solid #9BA4B544',
                                         margin: 'auto'
                                     }}
-                                         key={generateUUID()}
-
                                     >
                                     </div>
                                 ) : null
                             }
-                        </>;
+                        </div>;
                     });
                 }
             )()
