@@ -2,6 +2,8 @@ import './ProjectsSection.css';
 import {projects_list, ProjectType} from '../../../data/projects.tsx';
 import {generateUUID} from '../../../utils.tsx';
 import {FaLink} from 'react-icons/fa';
+import {ViewImage} from '../../../components/ViewImage.tsx';
+import {useNavigate, useNavigation} from 'react-router-dom';
 
 const Project = (props: {
     project: ProjectType
@@ -18,7 +20,8 @@ const Project = (props: {
             <div className="image">
                 {
                     (props.project.images_list.length > 0) ? (
-                        <img src={props.project.images_list[0]} alt=""/>
+                        // <img src={props.project.images_list[0]} alt=""/>
+                        <ViewImage url={props.project.images_list[0]}/>
                     ) : undefined
                 }
             </div>
@@ -62,7 +65,7 @@ const Project = (props: {
 
                 {
                     props.project.links.map((link) => {
-                        return <a className={'link'} href={link.link} target="_blank"  key={generateUUID()}>
+                        return <a className={'link'} href={link.link} target="_blank" key={generateUUID()}>
                             <div style={{
                                 margin: '0 4px',
                                 display: 'flex',
@@ -79,6 +82,7 @@ const Project = (props: {
     </div>;
 };
 export const ProjectsSection = () => {
+    const nav = useNavigate();
     return <div className={'projects-section'}>
         <h1>Projects</h1>
 
@@ -108,6 +112,10 @@ export const ProjectsSection = () => {
                 }
             )()
         }
+
+        <div className="more" onClick={() => nav('../projects')}>
+            View More
+        </div>
 
     </div>;
 };

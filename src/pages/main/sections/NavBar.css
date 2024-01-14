@@ -4,7 +4,7 @@
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(10px);
     position: fixed;
-    width: 100vw;
+    width: 100%;
     z-index: 100;
     display: flex;
     justify-content: center;
@@ -23,7 +23,19 @@
     border-bottom: 1px solid #39486711;
     margin: 8px 12px;
     transition-duration: 100ms;
+    text-decoration: none;
 
+}
+
+.nav-bar .current {
+    color: #212A3E;
+    border-bottom: 1px solid #212A3E;
+}
+
+.nav-bar .current:hover {
+    color: #212A3E !important;
+    border-bottom: 1px solid #212A3E !important;
+    cursor: default !important;
 }
 
 .nav-bar .option:hover {

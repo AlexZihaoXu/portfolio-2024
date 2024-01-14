@@ -2,6 +2,7 @@ import './EducationSection.css';
 import waterloo from './waterloo_e7.png';
 import mci from './middlefield_ci.png';
 import {motion} from 'framer-motion';
+import {ViewImage} from '../../../components/ViewImage.tsx';
 export const EducationSection = () => {
     return <div className={'education-section'}>
         <motion.div
@@ -30,7 +31,7 @@ export const EducationSection = () => {
                 <h4>Undergraduate, Computer Engineering</h4>
 
                 <div className="image">
-                    <img src={waterloo} alt="Waterloo E7"/>
+                    <ViewImage url={waterloo}/>
                 </div>
 
 
@@ -43,7 +44,7 @@ export const EducationSection = () => {
                 <div className="time">2019 — 2023</div>
                 <h3>Middlefield Collegiate Institute</h3>
                 <div className="image">
-                    <img src={mci} alt="Middlefield C.I."/>
+                    <ViewImage url={mci}/>
                 </div>
 
                 <p>I graduated from Middlefield C.I. high school, where I developed a strong foundation in various
