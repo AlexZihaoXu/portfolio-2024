@@ -91,7 +91,7 @@
 
 .project .image {
     width: calc(max(150px, 30vw));
-    height: fit-content;
+    height: calc(max(150px, 17vw));
     max-height: 280px;
     max-width: 360px;
     margin: 8px 32px;
@@ -169,10 +169,14 @@
         width: calc(max(270px, 25vw));
         text-align: center;
         /*padding: 0 16px;*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .project .information .title {
         font-size: 20px;
+
     }
 
     .projects-section p {
