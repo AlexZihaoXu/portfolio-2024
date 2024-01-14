@@ -25,7 +25,7 @@ const ImagePopUp = (
         initial={{
             backgroundColor: '#33333300',
             backdropFilter: 'blur(0px)',
-            WebkitBackdropFilter: 'blur(0)'
+            WebkitBackdropFilter: 'blur(0px)'
         }}
         animate={{
             backgroundColor: '#33333399',
