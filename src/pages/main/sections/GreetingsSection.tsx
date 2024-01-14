@@ -3,7 +3,7 @@ import {FaGithub, FaInstagram} from 'react-icons/fa';
 import {MdOutlineMailOutline} from 'react-icons/md';
 import {ReactNode, useEffect} from 'react';
 import avatar from './avatar.png';
-
+import {motion} from 'framer-motion';
 
 const SocialMediaButton = (props: {
     children: ReactNode,
@@ -82,7 +82,7 @@ export const GreetingsSection = () => {
                         requestAnimationFrame(render);
                     }, 200);
                 } else {
-                    requestAnimationFrame(render)
+                    requestAnimationFrame(render);
                 }
             }
             if (now - lastUpdateTime > 1) {
@@ -101,32 +101,65 @@ export const GreetingsSection = () => {
         className="greetings-section"
 
     >
-        <div className="avatar">
+        <motion.div
+            className="avatar"
+            initial={{
+                scale: 0,
+                opacity: 0
+            }}
+            animate={{
+                scale: 1,
+                opacity: 1
+            }}
+
+            transition={{
+                type: 'spring',
+                damping: 12.5,
+                stiffness: 100,
+            }}
+        >
             <canvas id={'avatar-cvs'}/>
-        </div>
-        <h1>HELLO, I AM ALEX XU
-        </h1>
-        <p>A <span style={{
-            fontWeight: 'bolder',
-            fontSize: '24px',
-            fontFamily: 'Mukta, sans-serif'
-        }} className={'computer-engineering'}>
+        </motion.div>
+        <motion.div
+            initial={{
+
+                opacity: 0
+            }}
+            animate={{
+                opacity: 1
+            }}
+
+            transition={{
+                type: 'spring',
+                damping: 12.5,
+                stiffness: 100,
+            }}
+        >
+            <h1>HELLO, I AM ALEX XU
+            </h1>
+            <p>A <span style={{
+                fontWeight: 'bolder',
+                fontSize: '24px',
+                fontFamily: 'Mukta, sans-serif'
+            }} className={'computer-engineering'}>
                 Computer Engineering
             </span> student at the <span style={{
-            fontWeight: 'bolder',
-            fontSize: '24px',
-            fontFamily: 'Mukta, sans-serif'
+                fontWeight: 'bolder',
+                fontSize: '24px',
+                fontFamily: 'Mukta, sans-serif'
 
-        }} className={'university-of-waterloo'}>
+            }} className={'university-of-waterloo'}>
                 University of Waterloo.
             </span>
-        </p>
-        <div className="buttons-list">
-            <SocialMediaButton delay={.1} url={'https://www.instagram.com/alex_xu.2005'}> <FaInstagram/>
-            </SocialMediaButton>
-            <SocialMediaButton delay={.2} url={'https://github.com/AlexZihaoXu'}> <FaGithub/> </SocialMediaButton>
-            <SocialMediaButton delay={.3} url={'mailto:alex.zihao.xu@gmail.com'}> <MdOutlineMailOutline/>
-            </SocialMediaButton>
-        </div>
+            </p>
+            <div className="buttons-list">
+                <SocialMediaButton delay={.1} url={'https://www.instagram.com/alex_xu.2005'}> <FaInstagram/>
+                </SocialMediaButton>
+                <SocialMediaButton delay={.2} url={'https://github.com/AlexZihaoXu'}> <FaGithub/> </SocialMediaButton>
+                <SocialMediaButton delay={.3} url={'mailto:alex.zihao.xu@gmail.com'}> <MdOutlineMailOutline/>
+                </SocialMediaButton>
+            </div>
+        </motion.div>
+
     </div>;
 };
