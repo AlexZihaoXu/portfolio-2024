@@ -70,7 +70,15 @@ export const Projects = () => {
 
             </div>
             <div className="projects-list-container">
-                <div className="projects-list">
+                <motion.div
+                    className="projects-list"
+                    initial={{
+                        opacity: 0
+                    }}
+                    animate={{
+                        opacity: 1
+                    }}
+                >
 
                     {
                         (
@@ -97,7 +105,7 @@ export const Projects = () => {
                         )()
                     }
 
-                </div>
+                </motion.div>
             </div>
 
         </div>
