@@ -46,7 +46,7 @@
     cursor: pointer;
 }
 
-.projects-section .project {
+.project {
     width: min(80vw, 800px);
     margin: 32px auto;
     display: flex;
@@ -60,7 +60,7 @@
 
 }
 
-.projects-section .project:hover {
+.project:hover {
     box-shadow: 0 4px 10px #d4d7d9;
     border-top: 1px solid white;
     /*background: rgb(230,236,240);*/
@@ -68,7 +68,7 @@
     background: linear-gradient(33deg, #ecf2f5 0%, #F1F6F9 100%);
 }
 
-.projects-section .project .view-container .date {
+.project .view-container .date {
     margin-left: 32px;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -77,19 +77,19 @@
     font-size: 14px;
 }
 
-.projects-section .project .title {
+.project .title {
     font-family: "Open Sans", sans-serif;
     font-weight: 800;
     font-size: 18px;
     margin: 12px 0;
 }
 
-.projects-section .project .description {
+.project .description {
     font-family: "Open Sans", sans-serif;
     margin: 16px 16px 16px 0;
 }
 
-.projects-section .project .image {
+.project .image {
     width: calc(max(150px, 30vw));
     height: fit-content;
     max-height: 280px;
@@ -101,7 +101,7 @@
     overflow: hidden;
 }
 
-.projects-section .project .image img {
+.project .image img {
     width: 100%;
     height: 100%;
     max-width: 360px;
@@ -110,18 +110,19 @@
     scale: 1.125;
 }
 
-.projects-section .project .tags {
+.project .tags {
     margin: 16px 0;
 
 }
 
-.projects-section .project .links {
+.project .links {
     text-align: left;
     margin: 24px 0;
     width: 100%;
+    display: flex;
 }
 
-.projects-section .project .links .link {
+.project .links .link {
     font-family: Mukta, sans-serif;
     font-weight: bolder;
     display: flex;
@@ -134,13 +135,13 @@
     width: fit-content;
 }
 
-.projects-section .project .links .link:hover {
+.project .links .link:hover {
     cursor: pointer;
     color: #2f77fc;
 
 }
 
-.projects-section .project .information {
+.project .information {
     display: inline-block;
     vertical-align: top;
     width: fit-content;
@@ -148,7 +149,7 @@
 
 
 @media screen and (max-width: 800px) {
-    .projects-section .project .image {
+    .project .image {
         width: calc(max(260px, 25vw));
         height: calc(max(150px, 15vw));
         margin: 8px auto;
@@ -157,20 +158,20 @@
         background-color: black;
     }
 
-    .projects-section .project {
+    .project {
         flex-direction: column;
         align-items: center;
         padding-right: 0;
         width: min(80vw, 360px);
     }
 
-    .projects-section .project .information {
+    .project .information {
         width: calc(max(270px, 25vw));
         text-align: center;
         /*padding: 0 16px;*/
     }
 
-    .projects-section .project .information .title {
+    .project .information .title {
         font-size: 20px;
     }
 
@@ -178,12 +179,12 @@
         max-width: 240px;
     }
 
-    .projects-section .project .links {
+    .project .links {
         display: flex;
         justify-content: center;
     }
 
-    .projects-section .project .view-container .date {
+    .project .view-container .date {
         margin-left: 0;
     }
 }

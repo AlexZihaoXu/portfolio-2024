@@ -5,7 +5,7 @@ import {FaLink} from 'react-icons/fa';
 import {ViewImage} from '../../../components/ViewImage.tsx';
 import {useNavigate} from 'react-router-dom';
 
-const Project = (props: {
+export const Project = (props: {
     project: ProjectType
 }) => {
     return <div className={'project'}>
@@ -113,7 +113,10 @@ export const ProjectsSection = () => {
             )()
         }
 
-        <div className="more" onClick={() => nav('../projects')}>
+        <div className="more" onClick={() => {
+            nav('../projects');
+            scrollTo({top: 0});
+        }}>
             View More
         </div>
 

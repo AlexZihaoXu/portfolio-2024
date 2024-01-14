@@ -1,4 +1,4 @@
-import {motion} from 'framer-motion';
+import {AnimatePresence, motion} from 'framer-motion';
 import {useState} from 'react';
 
 
@@ -8,6 +8,8 @@ const ImagePopUp = (
         exitCallback: () => void
     }
 ) => {
+
+
     return <motion.div
         style={{
             position: 'fixed',
@@ -22,21 +24,20 @@ const ImagePopUp = (
         }}
         initial={{
             backgroundColor: '#33333300',
-            backdropFilter: 'blur(0)',
-            '-webkit-backdrop-filter': 'blur(0)'
-        } as never}
+            backdropFilter: 'blur(0px)',
+            WebkitBackdropFilter: 'blur(0)'
+        }}
         animate={{
             backgroundColor: '#33333399',
             backdropFilter: 'blur(3px)',
-            '-webkit-backdrop-filter': 'blur(3px)'
+            WebkitBackdropFilter: 'blur(3px)'
 
-        } as never}
+        }}
         exit={{
             backgroundColor: '#33333300',
-            backdropFilter: 'blur(0)'
+            backdropFilter: 'blur(0px)'
         }}
         onClick={props.exitCallback}
-        onScroll={(e) => e.stopPropagation()}
     >
 
         <motion.img
@@ -49,18 +50,23 @@ const ImagePopUp = (
                 height: 'auto',
                 objectFit: 'contain',
                 marginBottom: '100px'
-        }}
+            }}
             initial={{
                 scale: 0
             }}
             animate={{
                 scale: 1
             }}
+            exit={{
+                scale: 0,
+                opacity: 0
+            }}
             transition={{
                 type: 'spring',
                 stiffness: 280,
                 damping: 21
             }}
+
             onClick={(e) => e.stopPropagation()}
         />
 
@@ -78,18 +84,21 @@ export const ViewImage = (
 
 
     return <>
-        {showPopup ? <ImagePopUp url={props.url} exitCallback={() => setShowPopup(false)}/> : null}
+        <AnimatePresence>
+            {showPopup ? <ImagePopUp url={props.url} exitCallback={() => setShowPopup(false)}/> : null}
+        </AnimatePresence>
         <motion.img
             src={props.url} alt={props.url}
             initial={{
                 filter: 'brightness(1)',
-                '-webkit-filter': 'brightness(1)'
-            } as never}
+                WebkitFilter: 'brightness(1)',
+
+            }}
             whileHover={{
                 cursor: 'pointer',
                 filter: 'brightness(0.9)',
-                '-webkit-filter': 'brightness(0.9)'
-            } as never}
+                WebkitFilter: 'brightness(0.9)'
+            }}
             onClick={() => setShowPopup(true)}
         />
     </>;

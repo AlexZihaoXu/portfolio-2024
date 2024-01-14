@@ -12,7 +12,10 @@ const NavBarOption = (props: { name: string }) => {
     }, [window.location.pathname]);
 
     return <div className={'option' + (current ? ' current' : '')}
-                onClick={() => nav('../' + props.name.trim().toLowerCase())}>
+                onClick={() => {
+                    window.scrollTo({top: 0})
+                    nav('../' + props.name.trim().toLowerCase());
+                }}>
         {props.name}
     </div>;
 };
@@ -21,7 +24,7 @@ export const NavBar = () => {
 
     useEffect(() => {
         const listener = () => {
-            if (scrollY > 50) {
+            if (scrollY > 0) {
                 (ref.current as HTMLDivElement).style.boxShadow = '0 0 4px #20283e33';
             } else {
                 (ref.current as HTMLDivElement).style.boxShadow = '0 0 0 #ffffff00';
