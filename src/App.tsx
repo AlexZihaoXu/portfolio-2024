@@ -4,6 +4,7 @@ import {BrowserRouter, Navigate, Route, Routes, useLocation, useNavigate} from '
 import {useEffect} from 'react';
 import {NavBar} from './pages/main/sections/NavBar.tsx';
 import {Projects} from './pages/projects/Projects.tsx';
+import {Awards} from './pages/awards/Awards.tsx';
 
 const JumpToHome = () => {
     const nav = useNavigate();
@@ -32,6 +33,7 @@ export const App = () => {
                 <Route path={'/'} element={<JumpToHome/>}/>
                 <Route path={'/home'} element={<Main/>}/>
                 <Route path={'/projects'} element={<Projects/>}/>
+                <Route path={'/awards'} element={<Awards/>}/>
             </Routes>
         </BrowserRouter>
     </>;

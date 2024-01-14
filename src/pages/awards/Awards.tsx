@@ -1,8 +1,8 @@
-import './Projects.css';
+import './Awards.css';
 import {motion} from 'framer-motion';
+export const Awards = () => {
+    return <div className={'awards-page'}>
 
-export const Projects = () => {
-    return <div className={'projects-page'}>
         <div style={{
             display: 'flex',
             alignItems: 'center',
@@ -26,9 +26,9 @@ export const Projects = () => {
                 animate={{
                     backgroundColor: '#fae774',
                 }}
-            >Sorry, this page is still in development!
-            </motion.p>
+            >Sorry, this page is still in development!</motion.p>
 
         </div>
+
     </div>;
 };

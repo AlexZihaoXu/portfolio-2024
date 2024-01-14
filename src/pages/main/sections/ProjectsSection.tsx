@@ -3,7 +3,7 @@ import {projects_list, ProjectType} from '../../../data/projects.tsx';
 import {generateUUID} from '../../../utils.tsx';
 import {FaLink} from 'react-icons/fa';
 import {ViewImage} from '../../../components/ViewImage.tsx';
-import {useNavigate, useNavigation} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 const Project = (props: {
     project: ProjectType
