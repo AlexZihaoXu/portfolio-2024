@@ -39,7 +39,7 @@ export const projects_list: ProjectType[] = [
         links: [
             {name: 'GitHub', link: 'https://github.com/AlexZihaoXu/Minecraft_AE'}
         ],
-        description: 'Basic Minecraft implementation with Java over the 2021 Christmas break. Implemented a custom rendering engine using OpenGL.'
+        description: 'Basic Minecraft implementation with Java over the 2021 Christmas break. This game is entirely built from scratch without any pre-existing engine. Implemented a custom rendering engine using OpenGL. '
     },
     {
         title: 'Party Physics Game',
