@@ -5,12 +5,31 @@ import {Project} from '../main/sections/ProjectsSection.tsx';
 import {projects_list} from '../../data/projects.tsx';
 import {generateUUID} from '../../utils.tsx';
 import {useEffect} from 'react';
+import {HiArrowLeft} from 'react-icons/hi';
+import {useNavigate} from 'react-router-dom';
 
 export const Projects = () => {
     useEffect(() => {
         document.title = 'Alex | Projects';
     }, []);
+    const nav = useNavigate();
     return <>
+        <div className="nav-bar">
+
+            <div className={'nav-bar-content'}>
+                <div className="home" onClick={() => {
+                    nav('../home');
+                    scrollTo({top: 3100});
+                }}>
+                    <div className="arrow">
+                        <HiArrowLeft/>
+                    </div>
+                    <p>Home</p>
+                </div>
+            </div>
+
+
+        </div>
         <div style={{
             height: '48px',
             width: '100%',

@@ -197,6 +197,6 @@ export const projects_list: ProjectType[] = [
             {name: 'GitHub', link: 'https://github.com/AlexZihaoXu/flappybird.js'},
             {name: 'Try', link: 'https://alexzihaoxu.github.io/flappybird.js'}
         ],
-        description: 'My first JavaScript Game coded in grade 10. (I did\'nt use delta time while calculating the physics, so might run too fast on high refresh rate monitors.)'
+        description: 'My first JavaScript Game coded in grade 10. (I didn\'t use delta time while calculating the physics, so might run too fast on high refresh rate monitors.)'
     },
 ];
