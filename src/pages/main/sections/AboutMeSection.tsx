@@ -32,6 +32,7 @@ export const AboutMeSection = () => {
                 href={resume}><span style={{
                 marginRight: '4px',
                 fontStyle: 'italic',
+                textDecoration: 'underline'
             }}>resume</span> <FaExternalLinkAlt size={14}/></a>.</p>
         </motion.div>
 
