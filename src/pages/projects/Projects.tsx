@@ -4,8 +4,12 @@ import {motion} from 'framer-motion';
 import {Project} from '../main/sections/ProjectsSection.tsx';
 import {projects_list} from '../../data/projects.tsx';
 import {generateUUID} from '../../utils.tsx';
+import {useEffect} from 'react';
 
 export const Projects = () => {
+    useEffect(() => {
+        document.title = 'Alex | Projects';
+    }, []);
     return <>
         <div style={{
             height: '48px',
@@ -15,58 +19,73 @@ export const Projects = () => {
 
         </div>
         <div className={'projects-page'}>
-            <div
-                style={{
-                    backdropFilter: 'blur(1px)',
-                    backgroundRepeat: 'repeat-x',
-                    backgroundPosition: 'top',
-                    backgroundSize: 'auto',
-                    backgroundImage: `url(${blender_project})`
-                }}
-            >
-                <motion.div
-                    className="intro"
-                    initial={{
-                        backdropFilter: 'blur(30px)',
-                        WebkitBackdropFilter: 'blur(30px)'
-                    }}
-                    animate={{
-                        backdropFilter: 'blur(2px)',
-                        WebkitBackdropFilter: 'blur(2px)'
-                    }}
-                    transition={{
-                        duration: .3
-                    }}
-                >
-                    <motion.div
-                        className={'title'}
-                        initial={{
-                            opacity: 0
+            <div style={{
+                backgroundRepeat: 'repeat-x',
+                backgroundPosition: 'top',
+                backgroundSize: 'auto',
+                backgroundImage: `url(${blender_project})`,
+            }}>
+                <div style={{
+                    backdropFilter: 'blur(8px)'
+                }}>
+                    <div
+                        style={{
+                            backdropFilter: 'blur(1px)',
+                            WebkitBackdropFilter: 'blur(1px)',
+                            backgroundRepeat: 'repeat-x',
+                            backgroundPosition: 'top',
+                            backgroundSize: 'auto',
+                            backgroundImage: `url(${blender_project})`,
+                            margin: 'auto'
                         }}
-                        animate={{
-                            opacity: 1
-                        }}
-                        transition={{
-                            duration: .2, delay: .1
-                        }}
+                        className={'image-bg'}
                     >
-                        <h1>My Projects</h1>
-                    </motion.div>
+                        <motion.div
+                            className="intro"
+                            initial={{
+                                backdropFilter: 'blur(30px)',
+                                WebkitBackdropFilter: 'blur(30px)'
+                            }}
+                            animate={{
+                                backdropFilter: 'blur(2px)',
+                                WebkitBackdropFilter: 'blur(2px)'
+                            }}
+                            transition={{
+                                duration: .3
+                            }}
+                        >
+                            <motion.div
+                                className={'title'}
+                                initial={{
+                                    opacity: 0
+                                }}
+                                animate={{
+                                    opacity: 1
+                                }}
+                                transition={{
+                                    duration: .2, delay: .1
+                                }}
+                            >
+                                <h1>My Projects</h1>
+                            </motion.div>
 
-                    <motion.p
-                        initial={{
-                            opacity: 0
-                        }}
-                        animate={{
-                            opacity: 1
-                        }}
-                        transition={{
-                            duration: .2, delay: .16
-                        }}
-                    >Here is a list of some of my projects, feel free to check them out.
-                    </motion.p>
+                            <motion.p
+                                initial={{
+                                    opacity: 0
+                                }}
+                                animate={{
+                                    opacity: 1
+                                }}
+                                transition={{
+                                    duration: .2, delay: .16
+                                }}
+                            >Here is a list of some of my projects, feel free to check them out.
+                            </motion.p>
 
-                </motion.div>
+                        </motion.div>
+
+                    </div>
+                </div>
 
             </div>
             <div className="projects-list-container">
@@ -107,6 +126,7 @@ export const Projects = () => {
 
                 </motion.div>
             </div>
+
 
         </div>
     </>;

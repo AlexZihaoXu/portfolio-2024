@@ -23,7 +23,7 @@ p {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #666;
+    background: #5e5c5c;
     border-radius: 9px;
     margin: 8px;
     border: #dee3e7 solid 3px;

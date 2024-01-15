@@ -1,7 +1,24 @@
 import './Awards.css';
 import {motion} from 'framer-motion';
+import {useEffect} from 'react';
+
 export const Awards = () => {
-    return <div className={'awards-page'}>
+    useEffect(() => {
+        document.title = 'Alex | Awards';
+    }, []);
+    return <motion.div
+        className={'awards-page'}
+        initial={{
+            opacity: 0
+        }}
+        animate={{
+            opacity: 1
+        }}
+        exit={{
+            opacity: 0,
+            scale: 0
+        }}
+    >
 
         <div style={{
             display: 'flex',
@@ -26,9 +43,10 @@ export const Awards = () => {
                 animate={{
                     backgroundColor: '#fae774',
                 }}
-            >Sorry, this page is still in development!</motion.p>
+            >Sorry, this page is still in development!
+            </motion.p>
 
         </div>
 
-    </div>;
+    </motion.div>;
 };

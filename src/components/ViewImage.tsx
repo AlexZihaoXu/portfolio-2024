@@ -16,9 +16,9 @@ const ImagePopUp = (
             zIndex: '200',
             width: '100vw',
             height: '100vh',
-            top: 0,
-            left: 0,
             display: 'flex',
+            left: 0,
+            top: 0,
             alignItems: 'center',
             justifyContent: 'center',
         }}
@@ -46,10 +46,10 @@ const ImagePopUp = (
                 background: 'black',
                 maxWidth: 'fit-content',
                 maxHeight: 'initial',
-                width: 'min(80vw, 80vh)',
-                height: 'auto',
+                width: innerWidth < 660 ? 'min(70vw, 70vh)' : 'auto',
+                height: innerWidth > 660 ? 'min(60vw, 60vh)' : 'auto',
                 objectFit: 'contain',
-                marginBottom: '100px'
+                marginBottom: '50px'
             }}
             initial={{
                 scale: 0
