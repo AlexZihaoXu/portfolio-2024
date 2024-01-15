@@ -43,11 +43,11 @@ const ImagePopUp = (
         <motion.img
             src={props.url} alt={props.url}
             style={{
-                background: 'black',
+                background: 'transparent',
                 maxWidth: 'fit-content',
                 maxHeight: 'initial',
-                width: innerWidth < 660 ? 'min(70vw, 70vh)' : 'auto',
-                height: innerWidth > 660 ? 'min(60vw, 60vh)' : 'auto',
+                width: '80vw',
+                height: '80vh',
                 objectFit: 'contain',
                 marginBottom: '50px'
             }}
@@ -67,7 +67,6 @@ const ImagePopUp = (
                 damping: 21
             }}
 
-            onClick={(e) => e.stopPropagation()}
         />
 
 
