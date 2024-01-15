@@ -6,7 +6,7 @@ import decide4me0 from './decide4me.png';
 import soulknight0 from './soulknight.png';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
-import soulknight_zip_file from './Alex_Xu-SoulKnight-Python-Clone.zip';
+import soulknight_zip_file from './SoulKnight-Python_Clone.zip';
 
 export type ProjectType = {
     title: string,

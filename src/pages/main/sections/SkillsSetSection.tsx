@@ -23,19 +23,20 @@ import {FaCloudflare, FaRaspberryPi, FaReact} from 'react-icons/fa';
 import {FiMonitor, FiServer} from 'react-icons/fi';
 import pygame from './pygame.png';
 import fusion360 from './fusion360.png';
-import {
-    CPlain,
-    CplusplusPlain,
-    CsharpPlain,
-    Css3Plain,
-    Html5Plain,
-    JavaPlain,
-    JavascriptPlain,
-    LuaPlain,
-    OpenalPlain,
-    PythonPlain,
-    TypescriptPlain
-} from 'devicons-react';
+
+
+import CPlain from 'devicons-react/lib/icons/CPlain';
+import CplusplusPlain from 'devicons-react/lib/icons/CplusplusPlain';
+import CsharpPlain from 'devicons-react/lib/icons/CsharpPlain';
+import Css3Plain from 'devicons-react/lib/icons/Css3Plain';
+import Html5Plain from 'devicons-react/lib/icons/Html5Plain';
+import JavaPlain from 'devicons-react/lib/icons/JavaPlain';
+import JavascriptPlain from 'devicons-react/lib/icons/JavascriptPlain';
+import LuaPlain from 'devicons-react/lib/icons/LuaPlain';
+import OpenalPlain from 'devicons-react/lib/icons/OpenalPlain';
+import PythonPlain from 'devicons-react/lib/icons/PythonPlain';
+import TypescriptPlain from 'devicons-react/lib/icons/TypescriptPlain';
+
 import {FaUnity} from 'react-icons/fa6';
 import {ReactNode} from 'react';
 import {MdOutlineCloudQueue} from 'react-icons/md';
