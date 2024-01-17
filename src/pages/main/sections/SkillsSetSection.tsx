@@ -43,6 +43,7 @@ import {MdOutlineCloudQueue} from 'react-icons/md';
 import {HiOutlineCubeTransparent} from 'react-icons/hi';
 import google_cloud_platform from './google_cloud_platform.png';
 import stm32 from './stm32.png';
+import wokwi from './wokwi.png'
 
 
 const ListItem = (props: {
@@ -164,6 +165,10 @@ export const SkillsSetSection = () => {
                         <ListItem order={2}>
                             <div className="icon"><img src={fusion360} alt=""/></div>
                             Fusion 360
+                        </ListItem>
+                        <ListItem order={2}>
+                            <div className="icon"><img src={wokwi} alt=""/></div>
+                            Wokwi
                         </ListItem>
 
                     </ul>

@@ -35,7 +35,9 @@ export const EducationSection = () => {
                 </div>
 
 
-                <p>I am currently an undergraduate Computer Engineering student at the University of Waterloo.</p>
+                <p>
+                    With unwavering passion and ambitious dreams, I wholeheartedly dedicated myself to my major studies
+                </p>
 
 
             </div>
@@ -47,12 +49,15 @@ export const EducationSection = () => {
                     <ViewImage url={mci}/>
                 </div>
 
-                <p>I graduated from Middlefield C.I. high school, where I developed a strong foundation in various
-                    subjects
-                    and extracurricular activities.</p>
+                {/*<p>I graduated from Middlefield C.I. high school, where I developed a strong foundation in various*/}
+                {/*    subjects*/}
+                {/*    and extracurricular activities.</p>*/}
                 <p>
-                    I also served as the president of the MCI's Programming Club, organizing events and encouraging a
-                    collaborative atmosphere for coding fans.</p>
+                    As MCI Programming Club president, I organized weekly events, fostering a collaborative coding environment.
+                </p>
+                <p>
+                    MCI's life ignited my passion for teamwork, programming, and project management.
+                </p>
 
             </div>
         </motion.div>

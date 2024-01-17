@@ -86,7 +86,7 @@ export const ProjectsSection = () => {
     return <div className={'projects-section'}>
         <h1>Projects</h1>
 
-        <p>Here are some of the projects I've worked on:</p>
+        <p>Frameworks facilitate rapid development, yet the confidence of coding gained from scratch is unparalleled.</p>
 
         {
             (

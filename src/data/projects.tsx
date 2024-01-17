@@ -42,17 +42,18 @@ export const projects_list: ProjectType[] = [
         description: 'Basic Minecraft implementation with Java over the 2021 Christmas break. This game is entirely built from scratch without any pre-existing engine. Implemented a custom rendering engine using OpenGL. '
     },
     {
-        title: 'Party Physics Game',
-        category: 'Game Dev',
+        title: 'Decide4Me Backend',
+        category: 'Backend',
         images_list: [
-            party_physics0
+            decide4me0
         ],
-        date: 'Dec 2022 - Jan 2023',
-        tags: ['Java', 'Java2D', 'Dyn4J', 'Socket'],
+        date: 'April 2021',
+        tags: ['Python', 'Flask', 'Firebase', 'GCP'],
         links: [
-            {name: 'GitHub', link: 'https://github.com/AlexZihaoXu/PartyPhysics'}
+            {name: 'GitHub', link: 'https://github.com/AlexZihaoXu/decide4me_backend'},
+            {name: 'Try', link: 'https://decide4me.pegas.is/'},
         ],
-        description: 'Designed a multiplayer game akin to Stick Fight, focusing on an immersive experience with interactive objects, dynamic graphics effects, such as particle systems, camera shakes, and smooth animation curves.'
+        description: 'The backend of the Decide4Me project. Developed using Python, Flask, and Firebase. Collaborated within a team, working with a frontend developer, and won the "Best Use of Cloud Computing" award at YRHacks.'
     },
     {
         title: 'Robotic Arm Project',
@@ -67,6 +68,20 @@ export const projects_list: ProjectType[] = [
         ],
         description: 'Built a Robotic Arm using the STM32 Nucleo board. Made 5 iterations of designs, entirely 3D printed. Designed and optimized for 3D printing with Fusion 360. Coded the entire system in C.'
     },
+    {
+        title: 'Party Physics Game',
+        category: 'Game Dev',
+        images_list: [
+            party_physics0
+        ],
+        date: 'Dec 2022 - Jan 2023',
+        tags: ['Java', 'Java2D', 'Dyn4J', 'Socket'],
+        links: [
+            {name: 'GitHub', link: 'https://github.com/AlexZihaoXu/PartyPhysics'}
+        ],
+        description: 'Designed a multiplayer game akin to Stick Fight, focusing on an immersive experience with interactive objects, dynamic graphics effects, such as particle systems, camera shakes, and smooth animation curves.'
+    },
+
     {
         title: 'Minecraft Remake in C++',
         category: 'Game Dev',
@@ -94,20 +109,7 @@ export const projects_list: ProjectType[] = [
         ],
         description: 'A tutorial that guides through the processing of making games from scratch using Java and Processing. Specifically made for my high school programming club. The content is written in Markdown using Typora, with animations implemented with p5.js.'
     },
-    {
-        title: 'Decide4Me Backend',
-        category: 'Backend',
-        images_list: [
-            decide4me0
-        ],
-        date: 'April 2021',
-        tags: ['Python', 'Flask', 'Firebase', 'GCP'],
-        links: [
-            {name: 'GitHub', link: 'https://github.com/AlexZihaoXu/decide4me_backend'},
-            {name: 'Try', link: 'https://decide4me.pegas.is/'},
-        ],
-        description: 'The backend of the Decide4Me project. Developed using Python, Flask, and Firebase. Collaborated within a team, working with a frontend developer, and won the "Best Use of Cloud Computing" award at YRHacks.'
-    },
+
     {
         title: 'SoulKnight Python Clone',
         category: 'Game Dev',
