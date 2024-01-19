@@ -2,7 +2,7 @@ import './ProjectsSection.css';
 import {projects_list, ProjectType} from '../../../data/projects.tsx';
 import {generateUUID} from '../../../utils.tsx';
 import {FaLink} from 'react-icons/fa';
-import {ViewImage} from '../../../components/ViewImage.tsx';
+import {ViewImage, ViewVideo} from '../../../components/ViewImage.tsx';
 import {useNavigate} from 'react-router-dom';
 
 export const Project = (props: {
@@ -21,7 +21,12 @@ export const Project = (props: {
                 {
                     (props.project.images_list.length > 0) ? (
                         // <img src={props.project.images_list[0]} alt=""/>
-                        <ViewImage url={props.project.images_list[0]}/>
+
+
+                        props.project.images_list[0].endsWith('.png') ?
+                            <ViewImage url={props.project.images_list[0]}/> :
+                            <ViewVideo url={props.project.images_list[0]}/>
+
                     ) : undefined
                 }
             </div>
@@ -86,18 +91,19 @@ export const ProjectsSection = () => {
     return <div className={'projects-section'}>
         <h1>Projects</h1>
 
-        <p>Frameworks facilitate rapid development, yet the confidence of coding gained from scratch is unparalleled.</p>
+        <p>Frameworks facilitate rapid development, yet the confidence of coding gained from scratch is
+            unparalleled.</p>
 
         {
             (
                 () => {
                     let i = 0;
-                    return projects_list.slice(0, 3).map((project) => {
+                    return projects_list.slice(0, 4).map((project) => {
                         i++;
                         return <div key={generateUUID()}>
                             <Project project={project}/>
                             {
-                                i < 3 ? (
+                                i < 4 ? (
                                     <div style={{
                                         width: 'min(80vw, 800px)',
                                         borderBottom: '1px solid #9BA4B544',
