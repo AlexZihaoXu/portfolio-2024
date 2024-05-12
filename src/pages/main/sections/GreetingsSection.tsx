@@ -4,6 +4,7 @@ import {MdOutlineMailOutline} from 'react-icons/md';
 import {ReactNode, useEffect} from 'react';
 import avatar from './avatar.png';
 import {motion} from 'framer-motion';
+import {PiLinkedinLogoBold} from 'react-icons/pi';
 
 const SocialMediaButton = (props: {
     children: ReactNode,
@@ -155,8 +156,11 @@ export const GreetingsSection = () => {
             <div className="buttons-list">
                 <SocialMediaButton delay={.1} url={'https://www.instagram.com/alex_xu.2005'}> <FaInstagram/>
                 </SocialMediaButton>
-                <SocialMediaButton delay={.2} url={'https://github.com/AlexZihaoXu'}> <FaGithub/> </SocialMediaButton>
-                <SocialMediaButton delay={.3} url={'mailto:alex.zihao.xu@gmail.com'}> <MdOutlineMailOutline/>
+                <SocialMediaButton delay={.2} url={'https://www.linkedin.com/in/alex-xu-912bb528b/'}>
+                    <PiLinkedinLogoBold/>
+                </SocialMediaButton>
+                <SocialMediaButton delay={.3} url={'https://github.com/AlexZihaoXu'}> <FaGithub/> </SocialMediaButton>
+                <SocialMediaButton delay={.4} url={'mailto:alex.zihao.xu@gmail.com'}> <MdOutlineMailOutline/>
                 </SocialMediaButton>
             </div>
         </motion.div>
