@@ -4,6 +4,8 @@
 git fetch origin
 git reset --hard origin/main
 
+chmod +x re-deploy.sh
+
 rm -rf ./build/*
 
 # Build the project
