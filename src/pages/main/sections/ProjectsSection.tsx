@@ -8,91 +8,80 @@ import {useNavigate} from 'react-router-dom';
 export const Project = (props: {
     project: ProjectType
 }) => {
-    return <div
-        
-        className={'project-background'}
-        style={{
-            backgroundImage: `url(${props.project.images_list[props.project.images_list.length - 1]})`,
-        }}
-    
-    >
-        <div className={'project'}
-        
-        >
-            
-            <div className="view-container">
-                
-                <div className="date">
-                    {props.project.date}
-                </div>
-                
-                
-                <div className="image">
-                    {
-                        (props.project.images_list.length > 0) ? (
-                            // <img src={props.project.images_list[0]} alt=""/>
-                            
-                            
-                            props.project.images_list[0].endsWith('.png') ?
-                                <ViewImage url={props.project.images_list[0]}/> :
-                                <ViewVideo url={props.project.images_list[0]}/>
-                        
-                        ) : undefined
-                    }
-                </div>
-            
-            
+    return <div className={'project'}>
+
+        <div className="view-container">
+
+            <div className="date">
+                {props.project.date}
             </div>
-            <div className="information">
-                
-                <div className="title">
-                    {props.project.title}
-                </div>
-                
-                
-                <div className="description">
-                    {props.project.description}
-                </div>
-                
-                <div className="tags">
-                    {
-                        props.project.tags.map((tag) => {
-                            return <div style={{
-                                padding: '4px 8px',
-                                fontSize: '11px',
-                                fontFamily: '"Open Sans", sans-serif',
-                                fontWeight: 'bold',
-                                color: '#9ca3b6',
-                                border: '1px solid #9ca3b6',
-                                marginTop: '8px',
-                                marginRight: '4px',
-                                borderRadius: '16px',
-                                width: 'fit-content',
-                                display: 'inline-block',
-                                cursor: 'default'
-                            }} key={generateUUID()}>
-                                {tag}
-                            </div>;
-                        })
-                    }
-                </div>
-                <div className="links">
-                    
-                    {
-                        props.project.links.map((link) => {
-                            return <a className={'link'} href={link.link} target="_blank" key={generateUUID()}>
-                                <div style={{
-                                    margin: '0 4px',
-                                    display: 'flex',
-                                    alignItems: 'center'
-                                }}>
-                                    <FaLink size={14}/>
-                                </div>
-                                {link.name}
-                            </a>;
-                        })
-                    }
-                </div>
+
+
+            <div className="image">
+                {
+                    (props.project.images_list.length > 0) ? (
+                        // <img src={props.project.images_list[0]} alt=""/>
+
+
+                        props.project.images_list[0].endsWith('.png') ?
+                            <ViewImage url={props.project.images_list[0]}/> :
+                            <ViewVideo url={props.project.images_list[0]}/>
+
+                    ) : undefined
+                }
+            </div>
+
+
+        </div>
+        <div className="information">
+
+            <div className="title">
+                {props.project.title}
+            </div>
+
+
+            <div className="description">
+                {props.project.description}
+            </div>
+
+            <div className="tags">
+                {
+                    props.project.tags.map((tag) => {
+                        return <div style={{
+                            padding: '4px 8px',
+                            fontSize: '11px',
+                            fontFamily: '"Open Sans", sans-serif',
+                            fontWeight: 'bold',
+                            color: '#9ca3b6',
+                            border: '1px solid #9ca3b6',
+                            marginTop: '8px',
+                            marginRight: '4px',
+                            borderRadius: '16px',
+                            width: 'fit-content',
+                            display: 'inline-block',
+                            cursor: 'default'
+                        }} key={generateUUID()}>
+                            {tag}
+                        </div>;
+                    })
+                }
+            </div>
+            <div className="links">
+
+                {
+                    props.project.links.map((link) => {
+                        return <a className={'link'} href={link.link} target="_blank" key={generateUUID()}>
+                            <div style={{
+                                margin: '0 4px',
+                                display: 'flex',
+                                alignItems: 'center'
+                            }}>
+                                <FaLink size={14}/>
+                            </div>
+                            {link.name}
+                        </a>;
+                    })
+                }
             </div>
         </div>
     </div>;

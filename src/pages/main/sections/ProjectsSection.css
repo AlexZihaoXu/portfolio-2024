@@ -42,45 +42,32 @@
 }
 
 .projects-section .more:hover {
-    background: rgb(33, 42, 62);
-    background: linear-gradient(93deg, rgba(33, 42, 62, 1) 0%, rgba(36, 32, 61, 1) 100%);
+    background: rgb(33,42,62);
+    background: linear-gradient(93deg, rgba(33,42,62,1) 0%, rgba(36,32,61,1) 100%);
     color: white;
     cursor: pointer;
 }
 
-.project-background {
-    border-radius: 8px;
-    width: fit-content;
-    margin: auto;
-    object-fit: cover;
-}
-
 .project {
-    border-radius: 8px;
-
-    background-color: #f2f6f9;
     width: min(80vw, 800px);
     margin: 32px auto;
     display: flex;
     padding: 20px 24px 16px 0;
+    border-radius: 8px;
     box-shadow: 0 0 3px #39486700;
     transition-duration: 200ms;
     border-top: 1px solid #ffffff00;
-    overflow: hidden;
-    backdrop-filter: blur(4px) brightness(120%) saturate(120%);
+    background: linear-gradient(-33deg, #F1F6F9FF 0%, #F1F6F9FF 100%);
 
-    /*background: linear-gradient(-33deg, #F1F6F9FF 0%, #F1F6F9FF 100%);*/
 
 }
 
 .project:hover {
-    box-shadow: 0 4px 10px 1px #d4d7d9;
+    box-shadow: 0 4px 10px #d4d7d9;
     border-top: 1px solid white;
     /*background: rgb(230,236,240);*/
-    background: rgba(255, 255, 255, 0.82);
-    backdrop-filter: blur(8px) brightness(120%) saturate(120%);
-
-    /*background: linear-gradient(33deg, #ecf2f5 0%, #F1F6F9 100%);*/
+    background: rgb(221,228,232);
+    background: linear-gradient(33deg, #ecf2f5 0%, #F1F6F9 100%);
 }
 
 .project .view-container .date {
