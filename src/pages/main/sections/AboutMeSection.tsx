@@ -1,6 +1,6 @@
 import './AboutMeSection.css';
 import {motion} from 'framer-motion';
-import resume from '../../../../files/Alex_Xu-Resume.pdf';
+import resume from '../../../../files/Alex_Zihao_Xu__Resume.pdf';
 import {FiDownload} from 'react-icons/fi';
 
 

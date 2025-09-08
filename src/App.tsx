@@ -3,6 +3,7 @@ import {Main} from './pages/main/Main.tsx';
 import {BrowserRouter, Navigate, Route, Routes, useLocation, useNavigate} from 'react-router-dom';
 import {useEffect} from 'react';
 import {Projects} from './pages/projects/Projects.tsx';
+import IceKnight from './pages/projects/unity/IceKnight.tsx';
 
 const JumpToHome = () => {
     const nav = useNavigate();
@@ -30,6 +31,7 @@ export const App = () => {
                 <Route path={'/'} element={<JumpToHome/>}/>
                 <Route path={'/home'} element={<Main/>}/>
                 <Route path={'/projects'} element={<Projects/>}/>
+                <Route path={'/unity/ice-knight'} element={<IceKnight/>}/>
             </Routes>
         </BrowserRouter>
     </>;
