@@ -20,6 +20,7 @@ import blender_iphone_paper0 from './blender_iphone_wallpaper.png';
 import space_shooter_project0 from './spaceshooter-project.png';
 import space_shooter_project1 from './space_shooter.mp4';
 import flappybird0 from './flappybird.png';
+import lobbify0 from './lobbify_0.png';
 
 export type ProjectType = {
     title: string,
@@ -49,6 +50,19 @@ export const projects_list: ProjectType[] = [
         description: 'Basic Minecraft implementation with Java over the 2021 Christmas break. This game is entirely built from scratch without any pre-existing engine. Implemented a custom rendering engine using OpenGL. '
     },
     {
+        'title': 'Lobbify',
+        'category': 'Frontend',
+        'images_list': [
+            lobbify0
+        ],
+        'date': 'Sept 2024 - Present',
+        'tags': ['Electron', 'React', 'HeroUI', 'Next.js', 'Supabase', 'Fastify', 'WebRTC', 'Cloudflare'],
+        'links': [
+            {'name': 'Website', 'link': 'https://lobbify.games'}
+        ],
+        'description': 'Lobby-based multiplayer platform for Minecraft with peer-to-peer networking over WebRTC and Cloudflare TURN fallback. Built with Electron, React, and HeroUI; integrated Supabase for authentication and Fastify backend for security.'
+    },
+    {
         title: 'Party Physics Game',
         category: 'Game Dev',
         images_list: [
@@ -76,7 +90,7 @@ export const projects_list: ProjectType[] = [
         ],
         description: 'Built a Robotic Arm using the STM32 Nucleo board. Made 5 iterations of designs, entirely 3D printed. Designed and optimized for 3D printing with Fusion 360. Coded the entire system in C.'
     },
-
+    
     {
         title: 'Decide4Me Backend',
         category: 'Backend',
@@ -91,9 +105,8 @@ export const projects_list: ProjectType[] = [
         ],
         description: 'The backend of the Decide4Me project. Developed using Python, Flask, and Firebase. Collaborated within a team, working with a frontend developer, and won the "Best Use of Cloud Computing" award at YRHacks.'
     },
-
-
-
+    
+    
     {
         title: 'Minecraft Remake in C++',
         category: 'Game Dev',
@@ -122,7 +135,7 @@ export const projects_list: ProjectType[] = [
         ],
         description: 'A tutorial that guides through the process of making games from scratch using Java and Processing. Specifically made for my high school programming club. The content is written in Markdown using Typora, with animations implemented with p5.js.'
     },
-
+    
     {
         title: 'SoulKnight Python Clone',
         category: 'Game Dev',
