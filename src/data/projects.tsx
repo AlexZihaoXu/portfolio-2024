@@ -209,7 +209,7 @@ export const projects_list: ProjectType[] = [
             flappybird0
         ],
         date: '2020',
-        tags: ['Blender'],
+        tags: ['JavaScript'],
         links: [
             {name: 'GitHub', link: 'https://github.com/AlexZihaoXu/flappybird.js'},
             {name: 'Try', link: 'https://alexzihaoxu.github.io/flappybird.js'}
